@@ -2,7 +2,7 @@ PANDOC = pandoc
 TEMPLATE_PATH = ./template.tex
 PDF_ENGINE = tectonic
 
-NAME = output
+NAME = 2023_TD1_Pizzi
 EXT = pdf
 SOURCES_DIR = ./src/
 RESOURCE_PATH = .
