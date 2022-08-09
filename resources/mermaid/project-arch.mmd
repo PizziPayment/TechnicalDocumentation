@@ -1,0 +1,22 @@
+flowchart LR
+  subgraph back [Services dorsaux]
+    bdd[(Base de données)]
+
+    subgraph server [Serveur]
+      auth_serv[Autorisation]
+      rsc_serv[Ressource]
+    end
+
+    auth_serv --> bdd
+    rsc_serv --> bdd
+  end
+
+  subgraph front [Application frontales]
+    app_web[Application sur toile]
+    app_mob["Application mobile (Android & iOS)"]
+  end
+
+  app_web --> server
+  app_mob --> server
+
+
