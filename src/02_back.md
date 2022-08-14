@@ -1,5 +1,14 @@
 # Services dorsaux
 
+## Technologies Utilisées 
+
+Les projets sont développés à l'aide du langage [TypeScript](https://www.typescriptlang.org)
+dans un environement [NodeJS](https://nodejs.org/en/). 
+Un [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) est présent 
+dans chaque projet pour spécifier les options de compilation. Pour les serveurs, le framework 
+[ExpressJS](https://expressjs.com/fr/) est utilisé. La base de données, quant à elle, utilise 
+le moteur [PostgreSQL](https://www.postgresql.org).
+
 ## Serveurs (autorisation et ressources)
 
 Le serveur d'autorisation et le serveur de ressources bien que servant
