@@ -91,7 +91,7 @@ notifications de GitHub se perdent en chemin.
 
 ## Abstraction de la Base de Données Pizzi-DB
 
-Afin de respecter une architecture de dépendance saine entre nos projets, l'abstraction vers notre
+Afin de respecter une architecture de dépendances saines entre nos projets, l'abstraction vers notre
 base de données est séparée du reste des projets et constitue un projet à part entière.
 
 Ce projet est constitué d'un paquet, `pizzi-db` qui est importé par les deux serveurs ansi que l'outil 
