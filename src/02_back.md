@@ -142,7 +142,7 @@ un dossier pour chaque domaine de l'application, généralement relié à une (o
 dans la base de données. Dans chacuns des ces dossiers se trouve un sous-dossier `models` avec les
 models utililisés et un fichier `database.service` qui regroupe le code métier du service.
 
-Chaque fonctions situées dans les services retournent un objet `Result` basé sur un `Result` du 
+Chacune des fonctions situées dans les services retournent un objet `Result` basé sur un `Result` du 
 paquet [neverthrow](https://github.com/supermacro/neverthrow) qui est utilisé pour une gestion 
 d'erreurs plus efficace et sécurisée. Il va sans dire que nous vous conseillons également de lire 
 la documentation de `neverthrow` afin de comprendre comment fonctionne le paquet.
