@@ -140,7 +140,7 @@ base de donnée. **Pour toute information quant à l'utilisation du paquet veuil
 Les fonctionnalités du projet sont situées à l'intérieur du dossier `src`. Ici vous trouverez
 un dossier pour chaque domaine de l'application, généralement relié à une (ou plusieurs tables)
 dans la base de données. Dans chacuns des ces dossiers se trouve un sous-dossier `models` avec les
-models utililisés et un fichier `database.service` qui regroupe le code métier du service.
+modèles utililisés et un fichier `database.service` qui regroupe le code métier du service.
 
 Chacune des fonctions situées dans les services retournent un objet `Result` basé sur un `Result` du 
 paquet [neverthrow](https://github.com/supermacro/neverthrow) qui est utilisé pour une gestion 
