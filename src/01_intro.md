@@ -17,7 +17,7 @@ projet ainsi que ses différents composants. Les principaux composants y sont
 présents.
 
 Les services dorsaux sont composés d'un serveur d'autorisation et d'un serveur
-de ressources, tout deux s'appuyants sur une base de données.
+de ressources, tous deux s'appuyant sur une base de données.
 
 Quand aux applications frontales que sont l'application web et l'application mobile,
 elles s'appuient toutes deux sur les serveurs d'autorisation et de resources.
