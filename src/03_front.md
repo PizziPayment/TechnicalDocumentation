@@ -13,7 +13,7 @@ Le projet mobile a été développé en [typescript](https://www.typescriptlang.
 - Index.js: c’est l’entrée de l’application mobile. Le fichier est en javascript car Pizzi utilise Expo Application Services (EAS) afin de déployer l’application mobile qui fonctionne seulement avec une entrée avec un fichier javascript.
 - [Eas.json](https://docs.expo.dev/build/eas-json/): configuration de EAS.
 - [Babel.config.js](https://babeljs.io/docs/en/configuration): configuration pour compiler différentes version de javascript.
-- [.eslintrc.js](https://eslint.org/docs/latest/user-guide/configuring/): configuration pour le vérifier certaines erreurs dans le code.
+- [.eslintrc.js](https://eslint.org/docs/latest/user-guide/configuring/): configuration pour vérifier certaines erreurs dans le code.
 
 ### Contribution
 
