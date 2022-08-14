@@ -37,7 +37,7 @@ figure \ref{fig:back-domain-struct}.
 
 Premièrement, le fichier `routes.config.ts` où sont spécifiées les routes du
 domaine. Deuxièment les `middlewares` qui permettent de vérifier la validité
-d'une requête entrante. Ceci sont chargés de vérifier que les champs requis
+d'une requête entrante. Ceux-ci sont chargés de vérifier que les champs requis
 soient bien présents. Troisièment les `controllers` qui s'occupent d'effectuer
 les opérations dit buisness. Enfin les `model` qui sont les structures de
 données d'un domaine qui les stockent lors des entrées et sorties.
