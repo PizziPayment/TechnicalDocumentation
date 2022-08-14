@@ -16,16 +16,16 @@ La Figure-\ref{fig:project-arch} permet d'avoir un aperçu sur l'architecture du
 projet ainsi que ses différents composants. Les principaux composants y sont
 présents.
 
-Les services dorsaux de composent d'un serveur d'autorisation et d'un serveur
-de ressources, tout deux s'appuyant sur une base de données.
+Les services dorsaux sont composés d'un serveur d'autorisation et d'un serveur
+de ressources, tout deux s'appuyants sur une base de données.
 
-Quand aux applications frontales que sont l'application sur toile et la mobile,
-elles s'appuyent toutes deux sur les serveurs d'autorisation et de resources.
+Quand aux applications frontales que sont l'application web et l'application mobile,
+elles s'appuient toutes deux sur les serveurs d'autorisation et de resources.
 
 ## Dépôts
 
 Tous les dépôts du projet sont hébergés sur github dans l'organisation
-[PizziPayment](https://github.com/PizziPayment). Faute de moyen, tous les
+[PizziPayment](https://github.com/PizziPayment). Faute de moyens, tous les
 dépôts sont à la racine de l'organisation. Nous allons ici les passer en revue,
 cependant le détail de chacun sera explicité dans leur section dédiée.
 
@@ -36,7 +36,7 @@ L'organisation des dépôts est la suivante:
     contenant les sources de l'application mobile.
 
   - [PizziWeb](https://github.com/PizziPayment/PizziWeb) est le dépôt contenant
-    les sources de l'application sur toile.
+    les sources de l'application web.
 
 - Services dorsaux:
   - [PizziAuthorizationServer](https://github.com/PizziPayment/PizziAuthorizationServer)
@@ -46,19 +46,19 @@ L'organisation des dépôts est la suivante:
     est le dépôt contenant les sources du serveur de ressources.
 
   - [PizziAPIDB](https://github.com/PizziPayment/PizziAPIDB) est un dépôt
-    contenant les sources une abstraction sous forme de services de la base de
+    contenant les sources de l'abstraction sous forme de paquet de notre base de
     données.
 
   - [PizziPayment.github.io](https://github.com/PizziPayment/PizziPayment.github.io.git)
     est le dépôt contenant la documentation publiée des APIs ainsi qu'une
-    collection Postman.
+    collection Postman pour tester les APIs.
 
   - [Documentation](https://github.com/PizziPayment/Documentation) est un dépôt
     qui permet le stockage temporaire de la documentation de l'API.
 
 - Devops:
   - [PizziBackDeploymentTools](https://github.com/PizziPayment/PizziBackDeploymentTools)
-    est le dépôt contenant les outils pour effectuer un déploiement.
+    est un dépôt contenant les outils pour effectuer un déploiement.
 
   - [DeployDB](https://github.com/PizziPayment/DeployDB) est un dépôt contenant
     l'outil permettant d'effectuer les migrations sur la base de données.
@@ -68,14 +68,14 @@ L'organisation des dépôts est la suivante:
     dépôt contenant un template pour un document destiné à EPITECH.
 
   - [DocumentBuilder](https://github.com/PizziPayment/DocumentBuilder) est un
-    dépôt qui permet de créer une image Docker afin de compiler un PDF (ex:
+    dépôt contenant une image Docker capable de compiler un PDF (ex:
     TemplateForPDF).
 
   - [TechnicalDocumentation](https://github.com/PizziPayment/TechnicalDocumentation)
-    est le dépôt contenant les sources de ce document.
+    est un dépôt contenant les sources de ce document.
 
-  - [PizziPLD](https://github.com/PizziPayment/PizziPLD) est le dépôt contenant
+  - [PizziPLD](https://github.com/PizziPayment/PizziPLD) est un dépôt contenant
     les sources qui permettent de créer le PLD.
 
-  - [PizziLandingPage](https://github.com/PizziPayment/PizziLandingPage) est le
-    dépôt contenant les sources de la page d'atterrissage.
+  - [PizziLandingPage](https://github.com/PizziPayment/PizziLandingPage) est un
+    dépôt contenant les sources de la page web de présentation du projet Pizzi.

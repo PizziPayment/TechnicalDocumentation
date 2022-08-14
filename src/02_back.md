@@ -5,7 +5,7 @@
 Le serveur d'autorisation et le serveur de ressources bien que servant
 différent buts, possèdent une architecture, un modèle de contribution, des
 normes et conventions similaire. Ainsi dans la prochaine section, "le serveur"
-s'applique au deux serveurs (autorisation et ressources).
+s'applique aux deux serveurs (autorisation et ressources).
 
 ### Architecture et organisation du projet
 
@@ -35,7 +35,7 @@ figure \ref{fig:back-domain-struct}.
   \label{fig:back-domain-struct}
 \end{figure}
 
-Premièrement, le fichier `routes.config.ts` ou sont spécifiées les routes du
+Premièrement, le fichier `routes.config.ts` où sont spécifiées les routes du
 domaine. Deuxièment les `middlewares` qui permettent de vérifier la validité
 d'une requête entrante. Ceci sont chargés de vérifier que les champs requis
 soient bien présents. Troisièment les `controllers` qui s'occupent d'effectuer
@@ -49,16 +49,64 @@ domaines, comme par exemple le middleware d'identification des utilisateurs.
 ### Tests
 
 Les tests sont stockés dans le dossier `tests`. Chaque fichier dans le dossier
-est une suite de tests pour un domaine spécifique. A noter que comme pour les
-domaines le dossier `common` regroupent des services et `models` servant pour
-de multiple tests.
+est une suite de tests pour un domaine spécifique. A noter que, à l'instar du dossier `app`, 
+le dossier `common` regroupe des services et `models` servant pour de multiple tests.
 
 ### Documentation
 
-La documention des routes HTTP du serveur se trouve dans le répertoire
+La documention des routes HTTP du serveur se trouve dans le dossier
 `documentation`. La documention est faîte grâce à la spécification [OpenAPI
 specification](https://spec.openapis.org/oas/v3.1.0).
 
 ### Convention de code
 
+Une configuration `prettier` est disponible dans chacun des projets
+afin de correctement formatter le code. La majorité des IDE modernes sont
+capable de charger une configuration prettier via le `.prettierrc.json` à 
+la racine, que ce soit nativement ou via une extension.
+
+Néanmoins, si votre IDE n'est pas compatible, il est toujours possible de 
+formatter votre code directement à l'aide de la commande `yarn run prettier app/ --write`.
+
+Une configuration `eslint` est également disponible et peut être utilisé via la 
+commande `yarn lint` si non supporté par votre IDE.
+
+Cependant, le développement de ce projet prenant place en l'an de grâce 2022, nous vous 
+conseillons fortement d'utiliser un IDE capable de supporter ces outils qui font partie des 
+bases du développement sur NodeJS depuis **plus de 5 ans**.
+
 ### Méthode de travail
+
+Les taches à effectuer sont fournies sous formes d'issue GitHub directement dans leurs 
+répertoire respectifs. Nous nous répartissons les taches en utilisant Discord. Assignez-vous 
+la ou les issues qui vous ont été attribuées lors de la répartition. 
+
+Par la suite il vous suffit de créer une branche pour votre issue en la tirant depuis la 
+**dernière version de la branche `develop`**. Lorsque votre fonctionnalité est terminée 
+**et validée par des tests**, vous pouvez créer une Pull Request en mentionnant l'issue 
+que cette dernière est sensée résoudre. **N'oubliez pas de vous assigner votre Pull Request 
+nouvellement créée**. Sélectionnez un autre membre de l'équipe pour effectuer votre revue
+de code, n'hésitez pas à le contacter sur Discord pour l'informer, il arrive que les 
+notifications de GitHub se perdent en chemin.
+
+## Abstraction de la Base de Données Pizzi-DB
+
+Afin de respecter une architecture de dépendance saine entre nos projets, l'abstraction vers notre
+base de données est séparée du reste des projets et constitue un projet à part entière.
+
+Ce projet est constitué d'un paquet, `pizzi-db` qui est importé par les deux serveurs ansi que l'outil 
+de migration.
+
+### Architecture et organisation du projet
+
+`pizzi-db` se base sur l'orm et outil de migration [Sequelize](https://sequelize.org) et abstrait tout ses
+usages. Ni le paquet `sequelize`, ni aucun de ses types ne sont exportés en dehors du paquet.
+
+
+### Tests
+
+### Convention de code
+
+### Méthode de travail
+
+### Déploiement
