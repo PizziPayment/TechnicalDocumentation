@@ -49,16 +49,16 @@ Il est obligatoire d'écrire des tests unitaires pour chaque nouvelle fonctionna
 
 ### Organisation de développement
 
-Afin de mener à bien le développement de l'application mobile, le projet s'organise de façon agile sous forme de sprint. La durée d'un sprint est d'une semaine. Toute le semaine un compte rendu de sprint est organisé avec toute l'équipe mobile afin d'attribuer les prochaines tâches et bugs du projet à chacun. Aussi c'est à ce moment-là que l'ensemble de l'équipe définit la complexité des tâches afin d'avoir une estimation de temps sur leur réalisation.
+Afin de mener à bien le développement des applications, le projet s'organise de façon agile sous forme de sprint. La durée d'un sprint est d'une semaine. Toute le semaine un compte rendu de sprint est organisé avec toute l'équipe afin d'attribuer les prochaines tâches et bugs du projet à chacun. Aussi c'est à ce moment-là que l'ensemble de l'équipe définit la complexité des tâches afin d'avoir une estimation de temps sur leur réalisation.
 
-Chaque jour un compte rendu est réalisé avec l'équipe mobile sur les tâches effectuées la veille et sur les prochaines tâches du jour. Cela permet de savoir où chacun en est et éventuellement d'avancer sur certains points bloquants. 
+Chaque jour un compte rendu est réalisé avec l'équipe sur les tâches effectuées la veille et sur les prochaines tâches du jour. Cela permet de savoir où chacun en est et éventuellement d'avancer sur certains points bloquants. 
 
 #### Sortie d'une nouvelle version de l'application
 
-Tous les mois une nouvelle version bêta de l'application mobile est déployée afin d'y ajouter les avancements de chaque sprint. La précédente version bêta devient la nouvelle version pour les utilisateurs si celle-ci possède plus de 90% de couverture de tests et que la stabilité a été validée par l'équipe. Pour le format de la version, l'équipe se base sur le standard de [semantice version](https://semver.org.). La version production pour les utilisateurs se trouve sur la branche `main` tandis que la version pour la branche bêta se trouve sur `develop`.
+Tous les mois une nouvelle version bêta de d'une application est déployée afin d'y ajouter les avancements de chaque sprint. La précédente version bêta devient la nouvelle version pour les utilisateurs si celle-ci possède plus de 90% de couverture de tests et que la stabilité a été validée par l'équipe. Pour le format de la version, l'équipe se base sur le standard de [semantice version](https://semver.org.). La version production pour les utilisateurs se trouve sur la branche `main` tandis que la version pour la branche bêta se trouve sur `develop`.
 
 ### Les outils utilisés
 
-Dans le cadre de votre collaboration avec le reste de l’équipe, vous aurez accès à différents outils de communication. Le premier outil de l’équipe s’appelle Discord. Si vous avez besoin d’une invitation veuillez envoyer un e-mail à l’adresse pizzi_2023@labeip.epitech.eu avec pour objet “[Invitation Discord]”. Un salon vocal intitulé `mobile` permet de faire les points avec l'équipe. Le salon textuel pour l'équipe mobile s'appelle `mobile` et les messages de statut sur le déploiement dans `mobile-deployment`.
+Dans le cadre de votre collaboration avec le reste de l’équipe, vous aurez accès à différents outils de communication. Le premier outil de l’équipe s’appelle Discord. Si vous avez besoin d’une invitation veuillez envoyer un e-mail à l’adresse pizzi_2023@labeip.epitech.eu avec pour objet “[Invitation Discord]”. Un salon vocal intitulé `mobile` permet de faire les points avec l'équipe. Le salon textuel pour l'équipe mobile s'appelle `mobile` et les messages de statut sur le déploiement sont dans `mobile-deployment`. Pour l'équipe logiciel le salon textuel s'appelle `web` et le salon de déploiement se nomme `web-deployment`.
 
 Dans l’objectif de centraliser les outils que Pizzi utilise, la gestion de tickets, les remontés de bugs s’effectuent directement sur GitHub. 
