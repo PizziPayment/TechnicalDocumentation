@@ -49,7 +49,7 @@ Il est obligatoire d'écrire des tests unitaires pour chaque nouvelle fonctionna
 
 ### Organisation de développement
 
-Afin de mener à bien le développement de l'application mobile, le projet s'organise de façon agile sous forme de sprint. La durée d'un sprint est d'une semaine. Toutes les semaines un compte rendu de sprint est organisé avec toute l'équipe mobile afin d'attribuer les prochaines tâches, bugs du projet à chacun. Aussi c'est à ce moment-là que l'ensemble de l'équipe défini la complexité des tâches afin d'avoir une estimation de temps sur leurs réalisations.
+Afin de mener à bien le développement de l'application mobile, le projet s'organise de façon agile sous forme de sprint. La durée d'un sprint est d'une semaine. Toute le semaine un compte rendu de sprint est organisé avec toute l'équipe mobile afin d'attribuer les prochaines tâches et bugs du projet à chacun. Aussi c'est à ce moment-là que l'ensemble de l'équipe définit la complexité des tâches afin d'avoir une estimation de temps sur leur réalisation.
 
 Chaque jour un compte rendu est réalisé avec l'équipe mobile sur les tâches effectuées la veille et sur les prochaines tâches du jour. Cela permet de savoir où chacun en est et éventuellement d'avancer sur certains points bloquants. 
 
