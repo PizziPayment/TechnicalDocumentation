@@ -37,11 +37,13 @@ sur Pizzi.
 
 ## Tableau des révisions
 
-| **Date**         | **Version**   | **Auteur**            | **Section(s)**   | **Commentaires**                                          |
-| ---------------- | ------------- | --------------------  | ---------------- | ----------------------------                              |
-| 07/08/2022       | 0.1           | Mathieu Pointecouteau | Toutes           | Création du template                                      |
-| 03/08/2022       | 0.2           | Mathieu Pointecouteau | Toutes           | Spécification du template pour la documentation technique |
-| 09/08/2022       | 0.3           | Mathieu Pointecouteau | Toutes           | Ajout de la section introduction                          |
+| **Date**         | **Version**   | **Auteur**            | **Section(s)**       | **Commentaires**                                                  |
+| ---------------- | ------------- | --------------------  | ----------------     | ----------------------------                                      |
+| 07/08/2022       | 0.1           | Mathieu Pointecouteau | Toutes               | Création du template                                              |
+| 03/08/2022       | 0.2           | Mathieu Pointecouteau | Toutes               | Spécification du template pour la documentation technique         |
+| 09/08/2022       | 0.3           | Mathieu Pointecouteau | Toutes               | Ajout de la section introduction                                  |
+| 09/08/2022       | 0.4           | Valentin Mille        | Front / Organisation | Ajout de la section front avec la partie mobile et organisation   |
+| 09/08/2022       | 0.5           | Rémi Poulenard        | Front / Organisation | Ajout de la section front avec la partie logiciel et organisation |
 
 \clearpage
 

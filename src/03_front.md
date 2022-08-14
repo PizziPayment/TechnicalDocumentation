@@ -1,10 +1,33 @@
 # Application frontales
 
+## Application mobile
+
+### Technologies utilisées
+
+Le projet mobile a été développé en [typescript](https://www.typescriptlang.org/) en utilisant [react-native](https://reactnative.dev/) afin d’avoir un seul code pour l’application mobile. Pizzi utilise le kit d'outil [expo](https://docs.expo.dev/) afin de faciliter le déploiement de l’application mobile.
+À la racine du dépôt, vous trouverez tous les fichiers de configurations nécessaires au projet:
+- [app.json](https://docs.expo.dev/versions/latest/config/app/): pour configurer expo.
+- [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): pour préciser les paramètres de compilation typescript.
+- [setupJest.ts](https://jestjs.io/docs/configuration): définit l’initialisation du kit d'outil Jest.
+- [metro.config.js](https://docs.expo.dev/guides/customizing-metro/): définit les paramètres pour le serveur metro utilisé par expo.
+- index.js: c’est l’entrée de l’application mobile. Le fichier est en javascript car Pizzi utilise Expo Application Services (EAS) afin de déployer l’application mobile qui fonctionne seulement avec une entrée avec un fichier javascript.
+- [eas.json](https://docs.expo.dev/build/eas-json/): configuration de EAS.
+- [babel.config.js](https://babeljs.io/docs/en/configuration): configuration pour compiler vers différentes versions de javascript.
+- [.eslintrc.js](https://eslint.org/docs/latest/user-guide/configuring/): configuration pour vérifier certaines erreurs dans le code.
+
+### Contribution
+
+L’équipe Pizzi utilise la gestion de configuration Git afin de garder une trace de chaque version de l’application et du travail de chacun.
+
+#### Normes du projet
+
+Afin de contribuer au développement de l’application mobile, vous devez vous assurer d’avoir le linter d’activer et de formater votre code. Cela permet de standardiser le code, d’éviter des changements inutiles et de faire en sorte que toute l’équipe se base sur un même style de code. L'équipe utilise actuellement [Eslint](https://eslint.org/) et [Prettier](https://prettier.io/) afin de corriger et de formater le code.
+
 ## Logiciel commerçant
 
 Le logiciel commerçant est basé sur une web application en Vue.JS 2.7,
 
-Vue.JS fonctionne en `vue` qui possèdent des composants. Nous nous efforçons au maximum de scinder ces composants afin de pouvoir par exemple les réutiliser.
+Vue.JS fonctionne en `vue` qui possède des composants. Nous nous efforçons au maximum de scinder ces composants afin de pouvoir par exemple les réutiliser.
 
 Nous utilisons Vuetify et nous servons des composants Vuetify afin de développer de manière plus rapide et consistante en terme de design les différentes fonctionnalités.
 
@@ -26,7 +49,7 @@ Nous utilisons vueRouter pour créer et relier les différentes vue entre elles.
 
 - [Bugsnag](https://www.bugsnag.com)
 
-Nous utilisons bugsnag pour monitorer l'activité utilisateur et également détecter chaque bug ou erreur remontée par le logiciel.
+Nous utilisons Bugsnag pour monitorer l'activité utilisateur et également détecter chaque bug ou erreur remontée par le logiciel.
 
 - [Labelmake](https://labelmake.jp)
 
@@ -43,8 +66,6 @@ Un paquet permettant d'effectuer des validations sur un modèle d'objet. Nous no
 - [Vuetify](https://vuetifyjs.com/en/)
 
 Nous utilisons vuetify comme framework de material design. Cela nous assure une cohérence visuelle sur toute la plateforme et un design moderne et accessible.
-
-
 
 ### Norme
 
