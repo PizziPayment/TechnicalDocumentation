@@ -54,8 +54,8 @@ le dossier `common` regroupe des services et `models` servants pour de multiple 
 
 ### Documentation
 
-La documention des routes HTTP du serveur se trouve dans le dossier
-`documentation`. La documention est faîte grâce à la spécification [OpenAPI
+La documentation des routes HTTP du serveur se trouve dans le dossier
+`documentation`. La documentation est faîte grâce à la spécification [OpenAPI
 specification](https://spec.openapis.org/oas/v3.1.0).
 
 ### Convention de code
