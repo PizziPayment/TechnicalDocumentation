@@ -35,13 +35,13 @@ Pour communiquer avec notre référent Epitech, nous utilisons [Microsoft Teams]
 
 ### Git
 
-Lorsque vous créez une branche, assurer que celle-ci se nomme en respectant le format `kebab-case`. Si la branche est créée pour résoudre un ticket alors celle-ci doit préfixer le numéro du ticket comme `123-map-view`.
+Lorsque vous créez une branche, assurez-vous que celle-ci se nomme en respectant le format `kebab-case`. Si la branche est créée pour résoudre un ticket alors celle-ci doit préfixer le numéro du ticket comme `123-map-view`.
 
 Chaque message (`commit`) du projet doit respecter la norme du [commit convetionnel](https://www.conventionalcommits.org/en/v1.0.0/).
 
 À chaque fois que vous envoyez votre contribution sur le dépôt de git, le code se formate automatiquement. Pendant une requête de fusion vers la branche `develop` du dépôt, une pipeline comportant le linter ainsi que les tests va se lancer et vérifier que votre contribution peut être acceptée dans la nouvelle branche. Chaque requête de fusion doit être revue par un membre de l'équipe. Si la pipeline est un succès et que votre travail a été revu par une personne alors vous pourrez fusionner votre travail en vous assurant de lier le ticket correspondant s'il y en a un.
 
-Une fois que votre contribution sera fusionné avec la branche `develop` un déploiement Expo Application Services (EAS) s'effectuera afin de générer l'Android Package (APK) pour les appareils Android (nous ne générons pour l'instant aucun package ou déploiement vers les appareils iOS pour le moment).
+Une fois que votre contribution sera fusionnée avec la branche `develop` un déploiement Expo Application Services (EAS) s'effectuera afin de générer l'Android Package (APK) pour les appareils Android (nous ne générons pour l'instant aucun package ou déploiement vers les appareils iOS pour le moment).
 
 ### Tests
 
