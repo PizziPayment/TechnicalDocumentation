@@ -41,7 +41,7 @@ Chaque message (`commit`) du projet doit respecter la norme du [commit convetion
 
 À chaque fois que vous envoyez votre contribution sur le dépôt de git, le code se formate automatiquement. Pendant une requête de fusion vers la branche `develop` du dépôt, une pipeline comportant le linter ainsi que les tests va se lancer et vérifier que votre contribution peut être acceptée dans la nouvelle branche. Chaque requête de fusion doit être revue par un membre de l'équipe. Si la pipeline est un succès et que votre travail a été revu par une personne alors vous pourrez fusionner votre travail en vous assurant de lier le ticket correspondant s'il y en a un.
 
-Une fois que votre contribution sera fusionnée avec la branche `develop` un déploiement Expo Application Services (EAS) s'effectuera afin de générer l'Android Package (APK) pour les appareils Android (nous ne générons pour l'instant aucun package ou déploiement vers les appareils iOS pour le moment).
+Une fois que votre contribution sera fusionnée avec la branche `develop` un déploiement Expo Application Services (EAS) s'effectuera afin de générer l'Android Package (APK) pour les appareils Android (nous ne générons pour l'instant aucun package ou ni déployons vers les appareils iOS).
 
 ### Tests
 
@@ -49,9 +49,13 @@ Il est obligatoire d'écrire des tests unitaires pour chaque nouvelle fonctionna
 
 ### Organisation de développement
 
-Afin de mener à bien le développement de l'application mobile, le projet s'organise de façon agile sous forme de sprint. La durée d'un sprint est d'une semaine. Toutes les semaines un compte rendu de sprint est organisé avec toute l'équipe mobile afin d'attribuer les prochaines tâches, bugs du projet à chacun. Aussi c'est à ce moment-là que l'ensemble de l'équipe défini la complexité des tâches afin d'avoir une estimation de temps sur leurs réalisations.
+Afin de mener à bien le développement de l'application mobile, le projet s'organise de façon agile sous forme de sprint. La durée d'un sprint est d'une semaine. Toute le semaine un compte rendu de sprint est organisé avec toute l'équipe mobile afin d'attribuer les prochaines tâches et bugs du projet à chacun. Aussi c'est à ce moment-là que l'ensemble de l'équipe définit la complexité des tâches afin d'avoir une estimation de temps sur leur réalisation.
 
 Chaque jour un compte rendu est réalisé avec l'équipe mobile sur les tâches effectuées la veille et sur les prochaines tâches du jour. Cela permet de savoir où chacun en est et éventuellement d'avancer sur certains points bloquants. 
+
+#### Sortie d'une nouvelle version de l'application
+
+Tous les mois une nouvelle version bêta de l'application mobile est déployée afin d'y ajouter les avancements de chaque sprint. La précédente version bêta devient la nouvelle version pour les utilisateurs si celle-ci possède plus de 90% de couverture de tests et que la stabilité a été validée par l'équipe. Pour le format de la version, l'équipe se base sur le standard de [semantice version](https://semver.org.). La version production pour les utilisateurs se trouve sur la branche `main` tandis que la version pour la branche bêta se trouve sur `develop`.
 
 ### Les outils utilisés
 

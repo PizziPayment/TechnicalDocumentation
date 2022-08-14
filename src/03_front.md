@@ -6,13 +6,13 @@
 
 Le projet mobile a été développé en [typescript](https://www.typescriptlang.org/) en utilisant [react-native](https://reactnative.dev/) afin d’avoir un seul code pour l’application mobile. Pizzi utilise le kit d'outil [expo](https://docs.expo.dev/) afin de faciliter le déploiement de l’application mobile.
 À la racine du dépôt, vous trouverez tous les fichiers de configurations nécessaires au projet:
-- [App.json](https://docs.expo.dev/versions/latest/config/app/): pour configurer expo.
-- [Tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): pour préciser les paramètres de compilation typescript.
-- [setupJest.ts](https://jestjs.io/docs/configuration): défini l’initialisation du kit d'outil Jest.
-- [Metro.config.js](https://docs.expo.dev/guides/customizing-metro/): défini les paramètres pour le serveur metro utilisé par expo.
-- Index.js: c’est l’entrée de l’application mobile. Le fichier est en javascript car Pizzi utilise Expo Application Services (EAS) afin de déployer l’application mobile qui fonctionne seulement avec une entrée avec un fichier javascript.
-- [Eas.json](https://docs.expo.dev/build/eas-json/): configuration de EAS.
-- [Babel.config.js](https://babeljs.io/docs/en/configuration): configuration pour compiler différentes version de javascript.
+- [app.json](https://docs.expo.dev/versions/latest/config/app/): pour configurer expo.
+- [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): pour préciser les paramètres de compilation typescript.
+- [setupJest.ts](https://jestjs.io/docs/configuration): définit l’initialisation du kit d'outil Jest.
+- [metro.config.js](https://docs.expo.dev/guides/customizing-metro/): définit les paramètres pour le serveur metro utilisé par expo.
+- index.js: c’est l’entrée de l’application mobile. Le fichier est en javascript car Pizzi utilise Expo Application Services (EAS) afin de déployer l’application mobile qui fonctionne seulement avec une entrée avec un fichier javascript.
+- [eas.json](https://docs.expo.dev/build/eas-json/): configuration de EAS.
+- [babel.config.js](https://babeljs.io/docs/en/configuration): configuration pour compiler vers différentes versions de javascript.
 - [.eslintrc.js](https://eslint.org/docs/latest/user-guide/configuring/): configuration pour vérifier certaines erreurs dans le code.
 
 ### Contribution
@@ -21,11 +21,7 @@ L’équipe Pizzi utilise la gestion de configuration Git afin de garder une tra
 
 #### Normes du projet
 
-Afin de contribuer au développement de l’application mobile, vous devez vous assurer d’avoir le linter d’activer et de formater votre code. Cela permet de standardiser le code, d’éviter des changements négligeables et de faire en sorte que toute l’équipe se base sur un même style de code. L'équipe utilise actuellement [Eslint](https://eslint.org/) et [Prettier](https://prettier.io/) afin de corriger et de formater le code.
-
-#### Sortie d'une nouvelle version de l'application
-
-Tous les mois une nouvelle version bêta de l'application mobile est déployée afin d'y ajouter les avancements de chaque sprint. La précédente version bêta devient la nouvelle version pour les utilisateurs si celle-ci possède plus de 90% de couverture de tests et que la stabilité a été validée par l'équipe. Pour le format de la version, l'équipe se base sur le standard de [semantice version](https://semver.org.). La version production pour les utilisateurs se trouve sur la branche `main` tandis que la version pour la branche bêta se trouve sur `develop`.
+Afin de contribuer au développement de l’application mobile, vous devez vous assurer d’avoir le linter d’activer et de formater votre code. Cela permet de standardiser le code, d’éviter des changements inutiles et de faire en sorte que toute l’équipe se base sur un même style de code. L'équipe utilise actuellement [Eslint](https://eslint.org/) et [Prettier](https://prettier.io/) afin de corriger et de formater le code.
 
 ## Logiciel commerçant
 
