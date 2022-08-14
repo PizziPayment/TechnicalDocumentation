@@ -7,6 +7,16 @@ let
   python-packages = pkgs.python3.withPackages packages;
 in
 pkgs.mkShell rec {
+  buildInputs = with pkgs; [
+    pandoc
+    python-packages
+    tectonic
+    # Used by some js shit
+    chromium
+    nodejs
+    yarn
+  ];
+
   shellHook =
     ''
       cd ./node_deps/
@@ -20,14 +30,4 @@ pkgs.mkShell rec {
       # config
       echo "{\"executablePath\": \"$(which chromium)\", \"args\": [\"--no-sandbox\"] }" > ./puppeteer-config.json
     '';
-
-  buildInputs = with pkgs; [
-    pandoc
-    python-packages
-    tectonic
-    # Used by some js shit
-    chromium
-    nodejs
-    yarn
-  ];
 }
