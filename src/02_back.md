@@ -160,8 +160,25 @@ le dossier `common` regroupe des services et `models` servants pour de multiple 
 
 ### Convention de code
 
+Une configuration `prettier` est disponible dans le projet afin de correctement formatter le code. 
+La majorité des IDE modernes sont capable de charger une configuration prettier via le 
+`.prettierrc.json` à la racine, que ce soit nativement ou via une extension.
 
+Néanmoins, si votre IDE n'est pas compatible, il est toujours possible de 
+formatter votre code directement à l'aide de la commande `yarn run prettier app/ --write`.
 
 ### Méthode de travail
 
+La méthode de travail sur ce projet est éxactement la même que pour les serveurs. D'ailleurs, vous remarquerez
+que l'implémentation d'une fonctionnalité sur un serveur mènera généralement à la modification du code sur celui-ci.
+
+**Il va également sans dire que chaque nouvelle fonctionnalité implémentée de ce côté se doit d'être correctement
+testée.**
+
 ### Déploiement
+
+Lorsque votre Pull Request est validée et reporté sur la branche `develop` du projet, un tag devra être poussé sur le 
+répertoire. Ce tag sera la nouvelle version du paquet qui pourra ensuite être utilisé dans les autres projets. Ce tag
+doit respecter le format `v{MAJEURE}.{MINEURE}.{PATCH}` par exemple `v1.2.0` est une version valide, ce que n'est pas 
+`v1a.2`.
+
