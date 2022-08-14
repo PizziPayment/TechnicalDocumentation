@@ -1,6 +1,7 @@
 PANDOC = pandoc
 TEMPLATE_PATH = ./template.tex
 PDF_ENGINE = tectonic
+MMDC ?= mmdc
 
 NAME = 2023_TD1_Pizzi
 EXT = pdf
@@ -26,7 +27,7 @@ ifdef PUPPETEER_CFG_PATH
 endif
 
 %.png : %.mmd
-	@mmdc -i $< -o $@ -b transparent $(MERMAID_OPTION)
+	@$(MMDC) -i $< -o $@ -b transparent $(MERMAID_OPTION)
 
 PANDOC_METADATA_OPTIONS = --metadata date="`date -u '+%d / %m / %Y'`"
 PANDOC_OPTIONS = --resource-path $(RESOURCE_PATH) --template $(TEMPLATE_PATH) $(PANDOC_METADATA_OPTIONS) --highlight-style pygments
