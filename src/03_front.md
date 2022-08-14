@@ -56,4 +56,4 @@ Nous utilisons Git et travaillons sur des branches qui sont ensuite ré-évalué
 
 Le déploiement se fait de manière automatique sur `netfliy` à chaque `git push` sur la branche `master`.
 
-Le logiciel commerçant est accessible en suivant le lien suivant : [Logiciel Commerçant](https://pizzi-webapp.netlify.app/dashboard)
+Le logiciel commerçant est accessible en suivant le lien suivant : [Logiciel Commerçant](https://pizzi-webapp.netlify.app/dashboard).
