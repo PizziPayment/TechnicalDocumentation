@@ -41,6 +41,7 @@ sur Pizzi.
 | ---------------- | ------------- | --------------------  | ---------------- | ----------------------------                              |
 | 07/08/2022       | 0.1           | Mathieu Pointecouteau | Toutes           | Création du template                                      |
 | 03/08/2022       | 0.2           | Mathieu Pointecouteau | Toutes           | Spécification du template pour la documentation technique |
+| 09/08/2022       | 0.3           | Mathieu Pointecouteau | Toutes           | Ajout de la section introduction                          |
 
 \clearpage
 
