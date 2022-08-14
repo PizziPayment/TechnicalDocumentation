@@ -177,7 +177,7 @@ testée.**
 
 ### Déploiement
 
-Lorsque votre Pull Request est validée et reporté sur la branche `develop` du projet, un tag devra être poussé sur le 
+Lorsque votre Pull Request est validée et reportée sur la branche `develop` du projet, un tag devra être poussé sur le 
 répertoire. Ce tag sera la nouvelle version du paquet qui pourra ensuite être utilisé dans les autres projets. Ce tag
 doit respecter le format `v{MAJEURE}.{MINEURE}.{PATCH}` par exemple `v1.2.0` est une version valide, ce que n'est pas 
 `v1a.2`.
