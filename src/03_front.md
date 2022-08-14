@@ -49,7 +49,7 @@ Nous utilisons vueRouter pour créer et relier les différentes vue entre elles.
 
 - [Bugsnag](https://www.bugsnag.com)
 
-Nous utilisons bugsnag pour monitorer l'activité utilisateur et également détecter chaque bug ou erreur remontée par le logiciel.
+Nous utilisons Bugsnag pour monitorer l'activité utilisateur et également détecter chaque bug ou erreur remontée par le logiciel.
 
 - [Labelmake](https://labelmake.jp)
 
