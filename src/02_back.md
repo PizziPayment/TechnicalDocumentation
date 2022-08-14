@@ -115,8 +115,8 @@ Les descriptions de chaque tables disponibles dans notre base de données sont s
         |-admins.database.model.ts
         |-...
   \end{BVerbatim}
-  \caption{Structure d'un domaine}
-  \label{fig:back-domain-struct}
+  \caption{Emplacement des modèles}
+  \label{fig:back-db-models}
 \end{figure}
 
 Chaque fichier se trouvant dans ce dossier contient une classe TypeScript décrivant la table.
@@ -133,8 +133,8 @@ base de donnée. **Pour toute information quant à l'utilisation du paquet veuil
   |
   |-client.database.service.ts
   \end{BVerbatim}
-  \caption{Structure d'un domaine}
-  \label{fig:back-domain-struct}
+  \caption{Structure d'un service}
+  \label{fig:back-service-struct}
 \end{figure}
 
 Les fonctionnalités du projet sont situées à l'intérieur du dossier `src`. Ici vous trouverez
