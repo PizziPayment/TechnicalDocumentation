@@ -78,7 +78,7 @@ bases du développement sur NodeJS depuis **plus de 5 ans**.
 ### Méthode de travail
 
 Les taches à effectuer sont fournies sous formes d'issue GitHub directement dans leurs 
-répertoire respectifs. Nous nous répartissons les taches en utilisant Discord. Assignez-vous 
+répertoire respectifs. Nous nous répartissons les tâches en utilisant Discord. Assignez-vous 
 la ou les issues qui vous ont été attribuées lors de la répartition. 
 
 Par la suite il vous suffit de créer une branche pour votre issue en la tirant depuis la 
