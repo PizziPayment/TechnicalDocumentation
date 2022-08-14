@@ -50,7 +50,7 @@ domaines, comme par exemple le middleware d'identification des utilisateurs.
 
 Les tests sont stockés dans le dossier `tests`. Chaque fichier dans le dossier
 est une suite de tests pour un domaine spécifique. A noter que, à l'instar du dossier `app`, 
-le dossier `common` regroupe des services et `models` servant pour de multiple tests.
+le dossier `common` regroupe des services et `models` servants pour de multiple tests.
 
 ### Documentation
 
@@ -102,10 +102,65 @@ de migration.
 `pizzi-db` se base sur l'orm et outil de migration [Sequelize](https://sequelize.org) et abstrait tout ses
 usages. Ni le paquet `sequelize`, ni aucun de ses types ne sont exportés en dehors du paquet.
 
+Les descriptions de chaque tables disponibles dans notre base de données sont stoquées dans le dossier 
+`app/common/services/orm/models`. 
+
+\begin{figure}[H]
+  \centering
+  \begin{BVerbatim}
+  common
+  |-services
+  | |-orm
+      |-models
+        |-admins.database.model.ts
+        |-...
+  \end{BVerbatim}
+  \caption{Structure d'un domaine}
+  \label{fig:back-domain-struct}
+\end{figure}
+
+Chaque fichier se trouvant dans ce dossier contient une classe TypeScript décrivant la table.
+Cette classe est ensuite chargée par Sequelize pour synchroniser ou créer les tables dans la 
+base de donnée. **Pour toute information quant à l'utilisation du paquet veuillez vous référer au 
+`README.md` disponible à la racine de [celui-ci](https://github.com/PizziPayment/PizziAPIDB).**
+
+\begin{figure}[H]
+  \centering
+  \begin{BVerbatim}
+  client
+  |-models
+  | |-client.model.ts
+  |
+  |-client.database.service.ts
+  \end{BVerbatim}
+  \caption{Structure d'un domaine}
+  \label{fig:back-domain-struct}
+\end{figure}
+
+Les fonctionnalités du projet sont situées à l'intérieur du dossier `src`. Ici vous trouverez
+un dossier pour chaque domaine de l'application, généralement relié à une (ou plusieurs tables)
+dans la base de données. Dans chacuns des ces dossiers se trouve un sous-dossier `models` avec les
+models utililisés et un fichier `database.service` qui regroupe le code métier du service.
+
+Chaque fonctions situées dans les services retournent un objet `Result` basé sur un `Result` du 
+paquet [neverthrow](https://github.com/supermacro/neverthrow) qui est utilisé pour une gestion 
+d'erreurs plus efficace et sécurisée. Il va sans dire que nous vous conseillons également de lire 
+la documentation de `neverthrow` afin de comprendre comment fonctionne le paquet.
+
+A noter que le dossier `common` ne représente pas une service en soit mais un
+regroupement de `services`, et `models` utilisés dans plusieurs autres services, 
+comme par exemple le model d'erreur qui est commun. Le dossier `extensions`, lui,
+rajoute des fonctions utiles lors de l'écriture d'un service.
 
 ### Tests
 
+Les tests sont stockés dans le dossier `tests` et le sous-dossier `services`. Chaque fichier dans le dossier
+est une suite de tests pour un service spécifique. A noter que, à l'instar du dossier `src`, 
+le dossier `common` regroupe des services et `models` servants pour de multiple tests.
+
 ### Convention de code
+
+
 
 ### Méthode de travail
 
