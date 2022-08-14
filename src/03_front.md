@@ -6,6 +6,7 @@
 
 Le projet mobile a été développé en [typescript](https://www.typescriptlang.org/) en utilisant [react-native](https://reactnative.dev/) afin d’avoir un seul code pour l’application mobile. Pizzi utilise le kit d'outil [expo](https://docs.expo.dev/) afin de faciliter le déploiement de l’application mobile.
 À la racine du dépôt, vous trouverez tous les fichiers de configurations nécessaires au projet:
+
 - [app.json](https://docs.expo.dev/versions/latest/config/app/): pour configurer expo.
 - [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): pour préciser les paramètres de compilation typescript.
 - [setupJest.ts](https://jestjs.io/docs/configuration): définit l’initialisation du kit d'outil Jest.
