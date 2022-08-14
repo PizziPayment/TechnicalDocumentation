@@ -102,7 +102,7 @@ de migration.
 `pizzi-db` se base sur l'orm et outil de migration [Sequelize](https://sequelize.org) et abstrait tout ses
 usages. Ni le paquet `sequelize`, ni aucun de ses types ne sont exportés en dehors du paquet.
 
-Les descriptions de chaque tables disponibles dans notre base de données sont stoquées dans le dossier 
+Les descriptions des tables et des relations dans notre base de données sont stockées dans le dossier 
 `app/common/services/orm/models`. 
 
 \begin{figure}[H]
