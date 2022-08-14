@@ -21,7 +21,7 @@ L’équipe Pizzi utilise la gestion de configuration Git afin de garder une tra
 
 #### Normes du projet
 
-Afin de contribuer au développement de l’application mobile, vous devez vous assurer d’avoir le linter d’activer et de formater votre code. Cela permet de standardiser le code, d’éviter des changements négligeables et de faire en sorte que toute l’équipe se base sur un même style de code. L'équipe utilise actuellement [Eslint](https://eslint.org/) et [Prettier](https://prettier.io/) afin de corriger et de formater le code.
+Afin de contribuer au développement de l’application mobile, vous devez vous assurer d’avoir le linter d’activer et de formater votre code. Cela permet de standardiser le code, d’éviter des changements inutiles et de faire en sorte que toute l’équipe se base sur un même style de code. L'équipe utilise actuellement [Eslint](https://eslint.org/) et [Prettier](https://prettier.io/) afin de corriger et de formater le code.
 
 #### Sortie d'une nouvelle version de l'application
 
