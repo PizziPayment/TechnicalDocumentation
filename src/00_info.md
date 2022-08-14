@@ -44,6 +44,7 @@ sur Pizzi.
 | 09/08/2022       | 0.3           | Mathieu Pointecouteau | Toutes               | Ajout de la section introduction                                  |
 | 09/08/2022       | 0.4           | Valentin Mille        | Front / Organisation | Ajout de la section front avec la partie mobile et organisation   |
 | 09/08/2022       | 0.5           | Rémi Poulenard        | Front / Organisation | Ajout de la section front avec la partie logiciel et organisation |
+| 14/08/2022       | 0.6           | Mathieu Pointecouteau | Services Dorsaux     | Ajout du paragraphe sur les outils de déploiements                |
 
 \clearpage
 

@@ -182,3 +182,21 @@ répertoire. Ce tag sera la nouvelle version du paquet qui pourra ensuite être 
 doit respecter le format `v{MAJEURE}.{MINEURE}.{PATCH}` par exemple `v1.2.0` est une version valide, ce que n'est pas 
 `v1a.2`.
 
+Chaque version est ensuite envoyée en preprod pour que les nouvelles
+fonctionnalités soient disponible pour le développement des applications
+frontales. Une fois testés par celle-ci également, la version est envoyée en
+production.
+
+## Outils de déploiement
+
+Actuellement les APIs de production sont deployés chez Mathieu POINTECOUTEAU
+sur un serveur personnel par faute de moyens. Toutefois, des outils de
+déploiement sont disponibles sur le dépôt
+[PizziBackDeploymentTools](https://github.com/PizziPayment/PizziBackDeploymentTools).
+Dans ce dépôt, deux scripts sont disponible `update.sh` et `clean.sh`. Le
+premier permet de créer les images Docker pour les APis. Ces images peuvent
+ensuite être lancées à la racine du dépôt en tant que conteneur grâce à la
+commande suivante `docker compose up -d auth-server rsc-server`. Le second
+script permet de nettoyer la machine des artéfacts produits par le premier.
+Pour plus de détail, un `README.md` bien fourni vous attend à la racine du
+dépôt.
