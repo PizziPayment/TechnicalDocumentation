@@ -184,12 +184,12 @@ doit respecter le format `v{MAJEURE}.{MINEURE}.{PATCH}` par exemple `v1.2.0` est
 
 Chaque version est ensuite envoyée en preprod pour que les nouvelles
 fonctionnalités soient disponible pour le développement des applications
-frontales. Une fois testés par celle-ci également, la version est envoyée en
+frontales. Une fois testées par celle-ci également, la version est envoyée en
 production.
 
 ## Outils de déploiement
 
-Actuellement les APIs de production sont deployés chez Mathieu POINTECOUTEAU
+Actuellement les APIs de production sont deployées chez Mathieu POINTECOUTEAU
 sur un serveur personnel par faute de moyens. Toutefois, des outils de
 déploiement sont disponibles sur le dépôt
 [PizziBackDeploymentTools](https://github.com/PizziPayment/PizziBackDeploymentTools).
