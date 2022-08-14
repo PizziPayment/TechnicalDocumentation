@@ -27,7 +27,7 @@ Afin de contribuer au développement de l’application mobile, vous devez vous 
 
 Le logiciel commerçant est basé sur une web application en Vue.JS 2.7,
 
-Vue.JS fonctionne en `vue` qui possèdent des composants. Nous nous efforçons au maximum de scinder ces composants afin de pouvoir par exemple les réutiliser.
+Vue.JS fonctionne en `vue` qui possède des composants. Nous nous efforçons au maximum de scinder ces composants afin de pouvoir par exemple les réutiliser.
 
 Nous utilisons Vuetify et nous servons des composants Vuetify afin de développer de manière plus rapide et consistante en terme de design les différentes fonctionnalités.
 
