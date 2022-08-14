@@ -30,7 +30,7 @@ Nous utilisons bugsnag pour monitorer l'activité utilisateur et également dét
 
 - [Labelmake](https://labelmake.jp)
 
-Nous utilisons Labelmake pour génerer des PDFs à partir de template javascript. Nous utilisons notamment ce paquet pour exporter les reçus en pdf.
+Nous utilisons Labelmake pour génerer des PDFs à partir de template javascript. Nous utilisons notamment ce paquet pour exporter les reçus en PDF.
 
 - [Moment](https://momentjs.com)
 
