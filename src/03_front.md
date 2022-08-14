@@ -4,6 +4,10 @@
 
 Le logiciel commerçant est basé sur une web application en Vue.JS 2.7,
 
+Vue.JS fonctionne en `vue` qui possèdent des composants. Nous nous efforçons au maximum de scinder ces composants afin de pouvoir par exemple les réutiliser.
+
+Nous utilisons Vuetify et nous servons des composants Vuetify afin de développer de manière plus rapide et consistante en terme de design les différentes fonctionnalités.
+
 ### Dépendances
 
 Nous utilisons les dépendances suivantes : 
@@ -26,7 +30,7 @@ Nous utilisons bugsnag pour monitorer l'activité utilisateur et également dét
 
 - [Labelmake](https://labelmake.jp)
 
-Nous utilisons Labelmake pour génerer des pdf à partir de template javascript. Nous utilisons notamment cette librairie pour exporter les reçu en pdf. 
+Nous utilisons Labelmake pour génerer des pdf à partir de template javascript. Nous utilisons notamment ce paquet pour exporter les reçu en pdf. 
 
 - [Moment](https://momentjs.com)
 
@@ -34,7 +38,7 @@ Nous utilisons moment pour manipuler et afficher aisément les dates en javascri
 
 - [Vuelidate](https://github.com/vuelidate/vuelidate)
 
-Une librairie permettant d'effectuer des validations sur un modèle d'objet. Nous nous en servons notamment pour les formulaires d'inscription.
+Un paquet permettant d'effectuer des validations sur un modèle d'objet. Nous nous en servons notamment pour les formulaires d'inscription.
 
 - [Vuetify](https://vuetifyjs.com/en/)
 
@@ -47,6 +51,8 @@ Nous utilisons vuetify comme framework de material design. Cela nous assure une 
 Nous utilisons la norme ESLINT ainsi que Prettier.
 
 ### Déploiement
+
+Nous utilisons Git et travaillons sur des branches qui sont ensuite ré-évalués par des pairs afin d'intégrer le travail dans la branche principale.
 
 Le déploiement se fait de manière automatique sur `netfliy` à chaque `git push` sur la branche `master`
 
