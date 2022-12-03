@@ -3,7 +3,7 @@ TEMPLATE_PATH = ./template.tex
 PDF_ENGINE = tectonic
 MMDC ?= mmdc
 
-NAME = 2023_TD1_Pizzi
+NAME = 2023_TD_Pizzi
 EXT = pdf
 
 SOURCES_DIR = ./src/
