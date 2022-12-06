@@ -3,11 +3,27 @@
 ## Technologies Utilisées 
 
 Les projets sont développés à l'aide du langage [TypeScript](https://www.typescriptlang.org)
-dans un environement [NodeJS](https://nodejs.org/en/). 
+dans un environement [NodeJS](https://nodejs.org/en/).
 Un [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) est présent 
-dans chaque projet pour spécifier les options de compilation. Pour les serveurs, le framework 
-[ExpressJS](https://expressjs.com/fr/) est utilisé. La base de données, quant à elle, utilise 
-le moteur [PostgreSQL](https://www.postgresql.org).
+dans chaque projet pour spécifier les options de compilation. 
+
+Pour les serveurs d'autorisation et ressources, le framework [ExpressJS](https://expressjs.com/fr/) 
+est utilisé. Ce framework permet de spécifier les paramètres des API, notamment les routes ou les 
+opérations HTTP acceptées sur les API au travers des routeurs, disponibles dans chaqun des domaines 
+situés dans les répertoires des projets, et inclus dans les fichiers `api.ts` des deux API.
+
+La base de données, quant à elle, utilise le moteur [PostgreSQL](https://www.postgresql.org).
+
+Afin de communiquer avec la base via les API [Sequelize](https://sequelize.org) est utilisé. 
+Sequelize est un ORM qui permet de générer et lier les différentes tables de la base de données à
+des classes TypeScript. Les modèles des tables sont tous disponibles dans le répertoire 
+`src/commons/services/orm/models` dans le répository `pizzi-db` (voir dans la partie dédiée).
+
+Pour déployer et migrer la base de données, un script, dépendant de `pizzi-db` est disponible.
+Ce script est situé dans le repository `DeployDB` et est utilisé pour mettre la base en production.
+Afin d'avoir un environnement de développement le plus proche possible de l'environnement de
+production, utiliser ce script pour déployer ou migrer les tables sur sa machine de dev est 
+fortement recommandé.
 
 ## Serveurs (autorisation et ressources)
 
@@ -112,7 +128,7 @@ de migration.
 usages. Ni le paquet `sequelize`, ni aucun de ses types ne sont exportés en dehors du paquet.
 
 Les descriptions des tables et des relations dans notre base de données sont stockées dans le dossier 
-`app/common/services/orm/models`. 
+`src/common/services/orm/models`. 
 
 \begin{figure}[H]
   \centering
