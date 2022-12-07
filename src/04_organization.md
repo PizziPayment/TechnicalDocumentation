@@ -4,7 +4,7 @@
 
 Afin de gérer le projet et les différentes tâches à effectuer dans le cadre du développement du projet Pizzi nous utilisons [Clickup](https://clickup.com). Cela nous permet d'avoir un suivi en vue Kanban et un espace tout en un où nous entreprosons nos documents.
 
-Le projet s'inscrivant dans le cadre de l'Epitech Innovative Project (EIP) et conformément aux méthodes de pédagogies, nous organisons chaque tâche ainsi que son scope associé dans un document nommé PLD (Projet Log Document). Cela nous permet de détailler avec précision l'impact de chaque tâche sur le projet et les conditions qui doivent être complétées afin de valider la tâche. Le PLD est divisé en grandes parties en respesctant l'architecture du projet : application mobile, logiciel commerçant, services dorsaux et enfin le terminal de paiement connecté.
+Le projet s'inscrivant dans le cadre de l'Epitech Innovative Project (EIP) et conformément aux méthodes pédagogiques, nous organisons chaque tâche ainsi que son scope associé dans un document nommé PLD (Projet Log Document). Cela nous permet de détailler avec précision l'impact de chaque tâche sur le projet et les conditions qui doivent être complétées afin de valider la tâche. Le PLD est divisé en grandes parties en respesctant l'architecture du projet : application mobile, logiciel commerçant, services dorsaux et enfin le terminal de paiement connecté.
 
 La rédaction du Project Log Document se fait en LaTeX. Dans un but de simplification, l'équipe a mis en place un convertisseur permettant d'écrire des fichiers directement en `.yaml` qui seront ensuite interprétés pour réaliser le PLD. Il faut être vigilant sur l'architecture et le format de vos fichiers sous peine de faire échouer la composition du document.
 
