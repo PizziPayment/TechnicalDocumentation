@@ -47,6 +47,7 @@ sur Pizzi.
 | 09/08/2022       | 0.5           | Rémi Poulenard        | Front / Organisation    | Ajout de la section front avec la partie logiciel et organisation |
 | 14/08/2022       | 0.6           | Mathieu Pointecouteau | Services Dorsaux        | Ajout du paragraphe sur les outils de déploiements                |
 | 02/12/2022       | 0.7           | Mathieu Pointecouteau | En-tête et pied de page | Ajout du nom de la section en cours                               |
+| 07/12/2022       | 0.8           | Rémi Poulenard        | Organisation et communication | Mise à jour de la section                                   |
 
 \clearpage
 
