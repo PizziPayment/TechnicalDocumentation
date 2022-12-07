@@ -1,0 +1,68 @@
+\definecolor{Darkgreen}{RGB}{40,133,57}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}[
+			transform shape, scale=1,
+			link/.style={->,draw=black,thick},
+			link_label/.style={inner sep=0.2cm},
+			link_label_step/.style={inner sep=0.3cm},
+			unit/.style={
+					rectangle,
+					fill=black!3,
+					draw,
+					thick,
+					minimum size = 0.5cm,
+					minimum height=1cm,
+					text width = 4cm,
+					text centered,
+					align=center,
+					node distance=4cm,
+					rounded corners=2mm
+				},
+			backFront/.style={
+					rectangle,
+					fill=yellow!40,
+					inner sep=0.3cm,
+					rounded corners=2mm},
+			backBack/.style={
+					rectangle,
+					fill=orange!40,
+					inner sep=0.3cm,
+					rounded corners=2mm}
+		]
+
+		\node(db) at (1, 0) [unit]{Postgres};
+
+		\node(rsc_server) [above left of=db, unit]{PizziResourceServer};
+		\node(auth_server) [above right of=db, unit]{PizziAuthorizationServer};
+
+		\node(pizzi_web) [above of=rsc_server, unit]{PizziWeb};
+		\node(pizzi_mobile) [above of=auth_server, unit]{PizziMobile};
+
+		\draw [->, link] ([xshift= -9ex] db.north)           -- node[left, link_label] {SQL} ([xshift= -1ex ]rsc_server.south);
+		\draw [->, link] ([xshift=  1ex] rsc_server.south)   -- node[right, link_label] {SQL} ([xshift= -7ex ]db.north);
+
+		\draw [->, link] ([xshift=  7ex] db.north)           -- node[left, link_label] {SQL} ([xshift= -1ex ]auth_server.south);
+		\draw [->, link] ([xshift=  1ex] auth_server.south)  -- node[right, link_label] {SQL} ([xshift= 9ex]db.north);
+
+		\draw [->, link] ([xshift= -9ex] pizzi_web.south)    -- node[left, link_label] {HTTP} ([xshift= -9ex ]rsc_server.north);
+		\draw [->, link] ([xshift= -7ex] rsc_server.north)   -- node[right, link_label] {HTTP} ([xshift= -7ex]pizzi_web.south);
+
+		\draw [->, link] ([xshift=  9ex] pizzi_web.south)    -- node[near end, right, link_label] {HTTP} ([xshift= -7ex ]auth_server.north);
+		\draw [->, link] ([xshift= -9ex] auth_server.north)  -- node[near end, left, link_label] {HTTP} ([xshift= 7ex]pizzi_web.south);
+
+		\draw [->, link] ([xshift= -9ex] pizzi_mobile.south) -- node[near end, left, link_label] {HTTP} ([xshift= 7ex ]rsc_server.north);
+		\draw [->, link] ([xshift=  9ex] rsc_server.north)   -- node[near end, right, link_label] {HTTP} ([xshift= -7ex]pizzi_mobile.south);
+
+		\draw [->, link] ([xshift=  9ex]pizzi_mobile.south)  -- node[right, link_label] {HTTP} ([xshift= 9ex ]auth_server.north);
+		\draw [->, link] ([xshift=  7ex] auth_server.north)  -- node[left, link_label] {HTTP} ([xshift= 7ex]pizzi_mobile.south);
+
+		\begin{pgfonlayer}{background}
+			\node [backFront, fit=(pizzi_web) (pizzi_mobile), label={[yshift=-1mm, fill=yellow!40, rounded corners=1mm]north:{Applications forntales}}] {};
+			\node [backBack, fit=(auth_server) (rsc_server) (db), label={[yshift=1mm, fill=orange!40, rounded corners=1mm]south:{Services dorsaux}}] {};
+		\end{pgfonlayer}
+	\end{tikzpicture}
+	\caption{Schéma de l'architecture du projet Pizzi}
+	\label{fig:project-arch}
+\end{figure}

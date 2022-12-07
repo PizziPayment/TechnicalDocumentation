@@ -5,22 +5,18 @@
 Le projet Pizzi se compose d'une partie dorsale sur laquelle s'appuie la partie
 frontale.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{resources/mermaid/project-arch.png}
-  \caption{Schéma de l'architecture du projet Pizzi}
-  \label{fig:project-arch}
-\end{figure}
+\input{src/project-architecture.tex}
 
 La Figure-\ref{fig:project-arch} permet d'avoir un aperçu sur l'architecture du
-projet ainsi que ses différents composants. Les principaux composants y sont
-présents.
+projet ainsi que leur flux et protocole de communication.
 
-Les services dorsaux sont composés d'un serveur d'autorisation et d'un serveur
-de ressources, tous deux s'appuyant sur une base de données.
+Les applications frontales regroupent l'application mobile (PizziMobile) et
+l'application commerçante (PizziWeb). Ces deux applications communiquent en
+HTTP avec le serveur de ressources (PizziResourceServer) ainsi que le server
+d'autorisation (PizziAuthorizationServer).
 
-Quand aux applications frontales que sont l'application web et l'application mobile,
-elles s'appuient toutes deux sur les serveurs d'autorisation et de resources.
+PizziAuthorizationServer et PizziResourceServer communiquent aussi avec la
+base de données (Postgres) en SQL.
 
 ## Dépôts
 
