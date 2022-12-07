@@ -5,7 +5,7 @@
 Les projets sont développés à l'aide du langage [TypeScript](https://www.typescriptlang.org)
 dans un environement [NodeJS](https://nodejs.org/en/).
 Un [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) est présent 
-dans chaque projet pour spécifier les options de compilation. 
+dans chaque projet pour spécifier les options de compilation.
 
 Pour les serveurs d'autorisation et ressources, le framework [ExpressJS](https://expressjs.com/fr/) 
 est utilisé. Ce framework permet de spécifier les paramètres des API, notamment les routes ou les 
