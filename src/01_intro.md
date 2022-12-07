@@ -8,15 +8,16 @@ frontale.
 \input{src/project-architecture.tex}
 
 La Figure-\ref{fig:project-arch} permet d'avoir un aperçu sur l'architecture du
-projet ainsi que leur flux et protocole de communication.
+projet. Les différents flux y sont également spécifiés avec leur protocole de
+communication respectif.
 
 Les applications frontales regroupent l'application mobile (PizziMobile) et
 l'application commerçante (PizziWeb). Ces deux applications communiquent en
-HTTP avec le serveur de ressources (PizziResourceServer) ainsi que le server
+HTTP avec le serveur de ressources (PizziResourceServer) ainsi que le serveur
 d'autorisation (PizziAuthorizationServer).
 
 PizziAuthorizationServer et PizziResourceServer communiquent aussi avec la
-base de données (Postgres) en SQL.
+base de données (PostgreSQL) en SQL.
 
 ## Dépôts
 
