@@ -20,10 +20,10 @@ des classes TypeScript. Les modèles des tables sont tous disponibles dans le r�
 `src/commons/services/orm/models` dans le répository `pizzi-db` (voir dans la partie dédiée).
 
 Pour déployer et migrer la base de données, un script, dépendant de `pizzi-db` est disponible.
-Ce script est situé dans le repository `DeployDB` et est utilisé pour mettre la base en production.
-Afin d'avoir un environnement de développement le plus proche possible de l'environnement de
-production, utiliser ce script pour déployer ou migrer les tables sur sa machine de dev est 
-fortement recommandé.
+Ce script est situé dans le repository `DeployDB` et est utilisé pour déployer et mettre à jours 
+la base en production. Afin d'avoir un environnement de développement le plus proche possible de 
+l'environnement de production, utiliser ce script pour déployer ou migrer les tables sur son 
+environnement de développement est fortement recommandé.
 
 ## Serveurs (autorisation et ressources)
 
