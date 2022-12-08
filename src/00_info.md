@@ -48,6 +48,7 @@ sur Pizzi.
 | 14/08/2022       | 0.6           | Mathieu Pointecouteau | Services Dorsaux            | Ajout du paragraphe sur les outils de déploiements                |
 | 02/12/2022       | 0.7           | Mathieu Pointecouteau | En-tête et pied de page     | Ajout du nom de la section en cours                               |
 | 07/12/2022       | 0.8           | Mathieu Pointecouteau | Introduction - Architecture | Amélioration de la sous-section suite au retour                   |
+| 08/12/2022       | 0.9           | Lilian Verlhac        | Services Dorsaux            | Précision des technologies utilisées                              |
 
 \clearpage
 
