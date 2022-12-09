@@ -14,8 +14,13 @@
 > - la coque du terminal a ete crée a l'aide d'une imprimante3D et du plastique dis PLA
 > - la coque a été désigné sur le logiciel [Tinkercad](https://www.tinkercad.com/)
 > - le fichier 3D a été slicer a l'aide de [Simplify3D](https://www.simplify3d.com/)
+> - Pour la réalisation des schémas de montage [Fritzing](https://fritzing.org/)
 
----
+### `Montage`
+
+Voici un svg du schéma de montage du TPE.
+
+![schema montage](../resources/tpe_bb.png)
 
 ## LOGICIEL
 
