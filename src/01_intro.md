@@ -26,9 +26,11 @@ Tous les dépôts du projet sont hébergés sur github dans l'organisation
 dépôts sont à la racine de l'organisation. Nous allons ici les passer en revue,
 cependant le détail de chacun sera explicité dans leur section dédiée.
 
-\input{src/repository-architecture.tex}
+\input{src/repository-architecture.tex} 
 
-L'organisation des dépôts est la suivante:
+La Figure-\ref{fig:repo-arch} permet d'avoir un aperçu sur l'architecture des dépôts. 
+
+Ces derniers sont détaillés dans la section suivante:
 
 - Application frontales:
   - [PizziMobile](https://github.com/PizziPayment/PizziMobile) est le dépôt
