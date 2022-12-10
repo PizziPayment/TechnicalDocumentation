@@ -14,7 +14,8 @@ SOURCES = 00_info.md \
 					01_intro.md \
 					02_back.md \
 					03_front.md \
-					04_organization.md
+					04_tpe.md \
+					05_organization.md
 
 SRC_MERMAID = project-arch.mmd
 DIR_MERMAID = $(RESOURCE_DIR)/mermaid
