@@ -2,7 +2,7 @@
   description = "Pizzi Technical Documentation builder.";
 
   inputs = {
-    nixpkgs.url = "github:NixOs/nixpkgs/nixos-21.11";
+    nixpkgs.url = "github:NixOs/nixpkgs/nixos-22.11";
     flake-utils.url = "github:numtide/flake-utils";
   };
 

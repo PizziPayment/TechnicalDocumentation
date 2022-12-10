@@ -1,0 +1,69 @@
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+			transform shape, scale=1,
+			link/.style={->,draw=black,thick},
+			link_label/.style={inner sep=0.2cm},
+			link_label_step/.style={inner sep=0.3cm},
+			unit/.style={
+					rectangle,
+					fill=black!3,
+					draw,
+					thick,
+					minimum size = 0.5cm,
+					minimum height=1cm,
+					text width = 4cm,
+					text centered,
+					align=center,
+					node distance=1.3cm,
+					rounded corners=2mm
+				},
+			bgFront/.style={
+					rectangle,
+					fill=yellow!40,
+					inner sep=0.3cm,
+					rounded corners=2mm},
+			bgBack/.style={
+					rectangle,
+					fill=orange!40,
+					inner sep=0.3cm,
+					rounded corners=2mm},
+			bgDevops/.style={
+					rectangle,
+					fill=purple!40,
+					inner sep=0.3cm,
+					rounded corners=2mm},
+			bgEpietch/.style={
+					rectangle,
+					fill=cyan!40,
+					inner sep=0.3cm,
+					rounded corners=2mm}
+		]
+		\node(pizzi_mobile)[unit]{PizziMobile};
+		\node(pizzi_web) [below of=pizzi_mobile, unit]{PizziWeb};
+
+		\node(auth_server)[below=2.7cm of pizzi_mobile, unit]{PizziAuthorizationServer};
+		\node(rsc_server)[below of=auth_server, unit]{PizziResourceServer};
+		\node(api_db)[below of=rsc_server, unit]{PizziAPIDB};
+		\node(pizzi_payment)[below of=api_db, unit]{PizziPayment.github.io};
+		\node(api_doc)[below of=pizzi_payment, unit]{Documentation};
+
+		\node(deploy_tools)[right=1.3cm of pizzi_mobile, unit]{PizziBackDeploymentTools};
+		\node(deploy_db)[below of=deploy_tools, unit]{DeployDB};
+
+		\node(pdf_template)[right=1.3cm of auth_server, unit]{TemplateForPDF};
+		\node(doc_builder)[below of=pdf_template, unit]{DocumentBuilder};
+		\node(tec_doc)[below of=doc_builder, unit]{TechnicalDocumentation};
+		\node(pld)[below of=tec_doc, unit]{PizziPLD};
+		\node(pizzi_landing)[below of=pld, unit]{PizziLandingPage};
+
+		\begin{pgfonlayer}{background}
+			\node [bgFront, fit=(pizzi_web) (pizzi_mobile), label={[yshift=-1mm, fill=yellow!40, rounded corners=1mm]north:{Applications frontales}}] {};
+			\node [bgBack, fit=(auth_server) (rsc_server) (api_db) (pizzi_payment) (api_doc), label={[yshift=-1mm, fill=orange!40, rounded corners=1mm]north:{Applications dorsales}}] {};
+			\node [bgDevops, fit=(deploy_tools) (deploy_db), label={[yshift=-1mm, fill=purple!40, rounded corners=1mm]north:{Devops}}] {};
+			\node [bgEpietch, fit=(pdf_template) (doc_builder) (tec_doc) (pld) (pizzi_landing), label={[yshift=-1mm, fill=cyan!40, rounded corners=1mm]north:{Epitech}}] {};
+		\end{pgfonlayer}
+	\end{tikzpicture}
+	\caption{Schéma des dépôts du projet Pizzi}
+	\label{fig:repo-arch}
+\end{figure}

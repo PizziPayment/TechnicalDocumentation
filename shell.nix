@@ -4,23 +4,5 @@ pkgs.mkShell rec {
   buildInputs = with pkgs; [
     pandoc
     tectonic
-    # Used by puppeteer shit
-    chromium
-    nodejs
-    yarn
   ];
-
-  shellHook =
-    ''
-      cd ./node_deps/
-      yarn install
-      cd ..
-
-      # Environment
-      export PUPPETEER_CFG_PATH="puppeteer-config.json"
-      export MMDC=./node_deps/node_modules/.bin/mmdc
-
-      # Puppeteer config
-      echo "{\"executablePath\": \"$(which chromium)\", \"args\": [\"--no-sandbox\"] }" > ./puppeteer-config.json
-    '';
 }
