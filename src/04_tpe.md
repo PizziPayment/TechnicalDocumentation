@@ -21,7 +21,13 @@ La coque du terminal a été fabriquée à l'aide d'une imprimante 3D et de plas
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{resources/tpe_bb.png}
+\rectschema[0.7][]{resources/tpe_bb.png}{
+    1.8/0.2/4.3/4.3/Écran/2,
+    4.35/2.1/6/4/Module RFID/1,
+    3.6/5.7/6/7.2/ESP32/2,
+    6.3/8.2/7.2/9.5/Buzzer/0,
+    7.8/5.2/10/7.9/Batterie/3
+}
 \caption{Schéma de montage du TPE}
 \label{fig:tpe_bb}
 \end{figure}
