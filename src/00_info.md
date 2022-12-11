@@ -51,7 +51,7 @@ sur Pizzi.
 | 07/12/2022 | 0.9         | Mathieu Pointecouteau | Introduction - Architecture   | Amélioration de la sous-section suite au retour                   |
 | 08/12/2022 | 1.0         | Lilian Verlhac        | Services Dorsaux              | Précision des technologies utilisées                              |
 | 08/12/2022 | 1.1         | Lilian Verlhac        | Dépots                        | Affichage d'un schéma des dépots                                  |
-| 10/12/2022 | 0.7         | Florian Antoine       | TPE                           | Ajout de la section TPE avec la partie hardware et logiciel       |
+| 10/12/2022 | 1.2         | Florian Antoine       | TPE                           | Ajout de la section TPE avec la partie hardware et logiciel       |
 
 \clearpage
 
