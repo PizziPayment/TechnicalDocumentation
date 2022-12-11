@@ -53,6 +53,7 @@ sur Pizzi.
 | 08/12/2022       | 1.0           | Lilian Verlhac        | Services Dorsaux              | Précision des technologies utilisées                              |
 | 08/12/2022       | 1.1           | Lilian Verlhac        | Dépots                        | Affichage d'un schéma des dépots                                  |
 | 11/12/2022       | 1.2           | Alban Garofoli        | Services Dorsaux              | Amélioration des sections sur les tests                           |
+| 11/12/2022       | 1.3           | Mathieu Pointecouteau | Infrastructure                | Ajout de la section                                               |
 
 
 \clearpage

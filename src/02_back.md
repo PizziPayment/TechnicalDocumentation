@@ -244,16 +244,103 @@ fonctionnalités soient disponible pour le développement des applications
 frontales. Une fois testées par celle-ci également, la version est envoyée en
 production.
 
-## Outils de déploiement
+## Infrastructure
 
 Actuellement les APIs de production sont deployées chez Mathieu POINTECOUTEAU
-sur un serveur personnel par faute de moyens. Toutefois, des outils de
-déploiement sont disponibles sur le dépôt
-[PizziBackDeploymentTools](https://github.com/PizziPayment/PizziBackDeploymentTools).
-Dans ce dépôt, deux scripts sont disponible `update.sh` et `clean.sh`. Le
-premier permet de créer les images Docker pour les APis. Ces images peuvent
-ensuite être lancées à la racine du dépôt en tant que conteneur grâce à la
-commande suivante `docker compose up -d auth-server rsc-server`. Le second
-script permet de nettoyer la machine des artéfacts produits par le premier.
-Pour plus de détail, un `README.md` bien fourni vous attend à la racine du
-dépôt.
+sur un serveur personnel par faute de moyens. L'architecture réseau est
+représentée sur la Figure-\ref{fig:network-arch}.
+
+\input{src/network.tex}
+
+Sur ce schéma, chaque noeud est un conteneur Docker. Ceux préfixés par
+`Pizzi` sont issus d'images Docker faites grâce aux outils de déploiement (voir
+\nameref{sec:deployment_tool}).
+
+Dans ce dépôt se trouve aussi un fichier `docker_compose.yaml` qui permet de
+déployer les services dorsaux comme sur la Figure-\ref{fig:network-arch} (voir
+\nameref{sec:deployment_docker_compose}). Sur la figure, les différents réseaux
+sont représentés.
+Ceux dans la couche `Docker` sont des réseaux accessibles uniquement aux membres
+de celui-ci.
+Les flèches entre les couches `Docker` et `Localhost` représentent la
+communication entre les conteneurs et la machine, qui s'effectue via un port
+exposé.
+
+Le conteneur `Swag` est utilisé comme un reverse proxy afin d'être le seul
+point d'entrée de la machine. Il redirige les requêtes entrantes depuis
+internet vers le bon service. Les requêtes sont redirigées en fonction de leur
+URI. Celui-ci permet également de garder un registre des requêtes qui ont été
+effectuées.
+
+Le conteneur `Pizzi Deploy DB` permet d'effectuer des migrations de la base de
+données. Il doit être lancé avant chaque mise en production afin de mettre à
+jour la base de donnéés.
+
+### Outils de déploiement {#sec:deployment_tool}
+
+Le dépôt
+[PizziBackDeploymentTools](https://github.com/PizziPayment/PizziBackDeploymentTools)
+contient les outils nécessaires pour déployer la partie backend de Pizzi.
+
+#### Génération des applications
+
+Dans ce dépôt, se trouve un script `update.sh` permettant de créer les trois
+images. Elles sont générées chacune en suivant les mêmes étapes. Nous allons
+ici prendre comme exemple le serveur d'autorisation:
+
+- Téléchargement des sources du projet depuis le dépôt de celui-ci
+  ```bash
+  GIT_URL="git@github.com:PizziPayment"
+  AUTH_SERVER_REPO="$GIT_URL/PizziAuthorizationServer"
+  AUTH_SERVER_BASE_DIR="PizziAuthorizationServer/sources"
+  AUTH_SERVER_BRANCH="master"
+  
+  fetch_projet_source
+    $AUTH_SERVER_BASE_DIR \
+    $AUTH_SERVER_REPO \
+    $AUTH_SERVER_BRANCH
+  ```
+  La fonction `fetch_projet_source` télécharge les sources du projet directement
+  dans le dossier spécifié par la variable `$AUTH_SERVER_BASE_DIR`.
+
+\vspace{\baselineskip}
+
+- Génération de l'application de production
+  ```bash
+  build 'PizziAuthorizationServer'
+  ```
+  La fonction `build` effectue les opérations suivantes:
+    - Téléchargement des dépendances de production
+    - Copie des dépendances de production dans le dossier d'artéfact
+    - Téléchargement des dépendances de développement
+    - Transpilation des sources du projet
+    - Copie des sources transpilées dans le dossier d'artéfact
+    - Copie de la configuration du projet dans le dossier d'artéfact
+
+\vspace{\baselineskip}
+
+- Génération de l'image Docker
+  ```bash
+  build_runner 'PizziAuthorizationServer' 'pizzi-auth-runner'
+  ```
+  La fonction `build_runner` s'occupe de générer l'image Docker via un
+  Dockerfile. Celui-ci effectue les opérations suivantes:
+    - Copie du dossier d'artéfact généré à l'étape précédente
+    - Dans le cas d'un serveur, exposition d'un port
+    - Définition du point d'entrée
+
+Un script `clean.sh` se trouve également dans le dépôt, il permet de supprimer
+les artéfacts, caches et images docker créés par le script `update.sh`.
+
+#### Déploiement {#sec:deployment_docker_compose}
+
+Une fois les images Docker générées, le déploiement s'effectue à l'aide des
+commandes suivantes:
+```bash
+docker compose up -d db
+docker compose run --rm db-migration
+docker compose up -d auth-server rsc-server
+```
+La première commande permet de lancer la base de données (`PostgreSQL`). La
+deuxième lance `Pizzi Deploy DB`. Et enfin la dernière lance les serveurs de
+ressources et d'autorisation.
