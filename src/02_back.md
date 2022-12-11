@@ -295,7 +295,7 @@ ici prendre comme exemple le serveur d'autorisation:
   Dockerfile. Celui-ci effectue les opérations suivantes:
     - Copie du dossier d'artéfact généré à l'étape précédente
     - Dans le cas d'un serveur, exposition d'un port
-    - Définition du point entrée
+    - Définition du point d'entrée
 
 Un script `clean.sh` se trouve également dans le dépôt, il permet de supprimer
 les artéfacts, caches et images docker créés par le script `update.sh`.
