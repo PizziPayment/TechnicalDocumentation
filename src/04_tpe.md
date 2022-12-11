@@ -36,8 +36,8 @@ Le Projet a été codé avec le Framework Arduino. Nous avons aussi utilisé, [P
 
 ### Dépendances
 
-> - [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI?utm_source=platformio&utm_medium=piohome): Librairie utilisée pour l'affichage sur l’écran TFT.
-> - [MFRC522-spi-i2c-uart-async](https://github.com/makerspaceleiden/rfid?utm_source=platformio&utm_medium=piohome): Librairie utilisée pour le module RFID.
+- [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI?utm_source=platformio&utm_medium=piohome): Librairie utilisée pour l'affichage sur l’écran TFT.
+- [MFRC522-spi-i2c-uart-async](https://github.com/makerspaceleiden/rfid?utm_source=platformio&utm_medium=piohome): Librairie utilisée pour le module RFID.
 
 ### Norme du projet
 
@@ -51,34 +51,41 @@ Le déploiement se fait par la suite grâce à platformIO, qui permet de compile
 
 ### Prérequis
 
-Assurez vous d'avoir `vscode` d'installer ainsi que l’extension `PlatformIO`
-Brancher votre TPE a l'USB de votre ordinateur.
+Assurez vous d'avoir `vscode` d'installer ainsi que l’extension `PlatformIO`.
+Brancher votre TPE en USB à votre ordinateur.
 
-Une fois le projet ouvert sur vscode, il vous suffit d'ouvrir l'extension PlatformIO.
-
-\begin{figure}[H]
-\centering
-\includegraphics{resources/platformio_btn.png}
-\label{fig:platformio_btn}
-\end{figure}
-
-un panneau s'ouvre, il vous faut sélectionner l'option `Upload`
+Une fois le projet ouvert sur vscode, il vous suffit d'ouvrir l'extension
+PlatformIO comme indiqué sur la figure ~\ref{fig:platformio_btn}.
 
 \begin{figure}[H]
-\centering
-\includegraphics{resources/platformio_actions.png}
-\label{fig:platformio_actions}
+  \centering
+  \includegraphics[width=0.05\textwidth]{resources/tpe/platformio_btn.png}
+  \caption{Extension PlatformIO dans vscode (barre de navigation)}
+  \label{fig:platformio_btn}
 \end{figure}
 
-une fenêtre s'ouvre et affiche l’état actuel du téléchargement.
+Un panneau s'ouvre, il vous faut sélectionner l'option `Upload` comme sur la
+figure \ref{fig:platformio_actions}.
 
 \begin{figure}[H]
-\centering
-\includegraphics{resources/finish_upload.png}
-\label{fig:finish_upload}
+  \centering
+  \includegraphics[width=0.4\textwidth]{resources/tpe/platformio_actions.png}
+  \caption{Menu extension PlatformIO}
+  \label{fig:platformio_actions}
 \end{figure}
 
-une fois le `success` affiché, l'upload est fini, le TPE va redémarrer seul.
+Une fenêtre s'ouvre et affiche l’état actuel du téléchargement comme indiqué
+sur \ref{fig:finish_upload}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{resources/tpe/finish_upload.png}
+  \caption{Status du téléversement}
+  \label{fig:finish_upload}
+\end{figure}
+
+Une fois le `success` affiché, l'upload est fini, le TPE redémarre sans
+qu'aucune action ne soit nécessaire.
 
 ### Contribution
 
