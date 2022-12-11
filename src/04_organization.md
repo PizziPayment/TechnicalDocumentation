@@ -71,15 +71,13 @@ Chaque jour un compte rendu est réalisé avec l'équipe sur les tâches effectu
 
 #### Sortie d'une nouvelle version de l'application
 
-Tous les mois une nouvelle version bêta de d'une application est déployée afin d'y ajouter les avancements de chaque sprint. La précédente version bêta devient la nouvelle version pour les utilisateurs si celle-ci possède plus de 90% de couverture de tests et que la stabilité a été validée par l'équipe. Pour le format de la version, l'équipe se base sur le standard de [semantice version](https://semver.org.). La version production pour les utilisateurs se trouve sur la branche `main` tandis que la version pour la branche bêta se trouve sur `develop`.
-
-\clearpage
+Tous les mois une nouvelle version bêta de l'application est déployée afin d'y ajouter les avancements de chaque sprint. La précédente version bêta devient la nouvelle version pour les utilisateurs si celle-ci possède plus de 90% de couverture de tests et que la stabilité a été validée par l'équipe. Pour le format de la version, l'équipe se base sur le standard de [semantice version](https://semver.org). La version production pour les utilisateurs se trouve sur la branche `main` tandis que la version pour la branche bêta se trouve sur `develop`.
 
 ### Les outils utilisés
 
 Dans le cadre de votre collaboration avec le reste de l’équipe, vous aurez accès à différents outils de communication:
 
-- [Discord](https://discord.com): C'est l'outil de communication au sein de l'équipe Pizz. Veuillez envoyer un e-mail à l’adresse suivante `pizzi_2023@labeip.epitech.eu` avec pour objet “[Invitation Discord]” pour y être invité. Une fois accepté dans le serveur, vous y trouverez divers canaux de communication, le plus utilisé étant le channel `général` où les informations importantes y sont promulguées. Vous aurez également accès au canal `ressources` et `access` contenant des informations importantes sur le projet.
+- [Discord](https://discord.com): C'est l'outil de communication au sein de l'équipe Pizz. Veuillez envoyer un e-mail à l’adresse suivante `pizzi_2023@labeip.epitech.eu` avec pour objet “[Invitation Discord]” pour y être invité. Une fois accepté dans le serveur, vous y trouverez divers canaux de communication, le plus utilisé étant le channel `général` où les informations importantes y sont promulguées. Vous aurez également accès aux canaux `ressources` et `access` contenant des informations importantes sur le projet.
 
 - [Github](https://github.com/): Dans l’objectif de centraliser les outils que Pizzi utilise, la gestion de tickets, les remontés de bugs s’effectuent directement sur GitHub dans la catégorie `issues`. Une fois l'issue créée, il est préférable d'y assigner un membre afin d'avoir une réponse promptement. Si vous ne savez pas qui assigner, ne vous en faites pas; un membre de l'équipe s'en chargera.
 

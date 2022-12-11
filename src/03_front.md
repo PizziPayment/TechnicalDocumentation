@@ -6,9 +6,9 @@
 
 Le projet mobile a été développé en [typescript](https://www.typescriptlang.org/). Le choix du langage s'est fait naturellement pour faciliter le développement et profiter du typage afin de clarifier le code et trouver des bugs plus facilement. Nous utilisons le framework [react-native](https://reactnative.dev/) dans le but d'unifier le code pour les plateformes Android et iOS. Pizzi utilise le kit d'outil [expo](https://docs.expo.dev/) permettant de faciliter le déploiement de l’application mobile mais également d'accéder à de nombreux outils de développement.
 
-Vu que nous utilisons react-native, nous utilisons le gestionnaire de store [Redux](https://redux.js.org/). Malgré son initialisation coûteuse en développement, il permet de rendre l'application beacoup plus scalable comparer aux autres solutions existantes. 
+Puisque que nous utilisons react-native, nous utilisons le gestionnaire de store [Redux](https://redux.js.org/). Malgré son initialisation coûteuse en développement, il permet de rendre l'application beaucoup plus scalable comparer aux autres solutions existantes. 
 
-En tant que coordinateur des écrans, l'application Pizzi utilise [react-navigation](https://reactnavigation.org/) un projet développer par de nombreux experts en react-native. Cette librairie s'est démarquée dans sa simplicité d'intégration, sa syntaxe simple à comprendre mais aussi sur les nombreux comportements adaptatifs.
+En tant que coordinateur des écrans, l'application Pizzi utilise [react-navigation](https://reactnavigation.org/) un projet développé par de nombreux experts en react-native. Cette librairie s'est démarquée dans sa simplicité d'intégration, sa syntaxe simple à comprendre mais aussi sur les nombreux comportements adaptatifs.
 
 Sur le plan architecture, l'application se base sur la [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html). Ce choix permet de séparer type de couche et d'isoler le comportement des librairies. Ainsi, si nous voulons changer de librairie de navigation ou de requête HTTP dans le futur nous pourrons le faire sans problème.
 
@@ -26,7 +26,7 @@ Sur le plan architecture, l'application se base sur la [clean architecture](http
 ### Contribution
 
 L’équipe Pizzi utilise la gestion de configuration Git afin de garder une trace de chaque version de l’application et du travail de chacun.
-Pizzi a préféré opter [GitHub](https://github.com/) vu que l'ensemble de l'équipe était déjà présent sur cette plateforme.
+L'ensemble des membres de Pizzi ont préféré utiliser [GitHub](https://github.com/) vu que l'ensemble de l'équipe était déjà présent sur cette plateforme.
 
 #### Normes du projet
 

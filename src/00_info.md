@@ -50,6 +50,9 @@ sur Pizzi.
 | 07/12/2022       | 0.8           | Rémi Poulenard        | Organisation et communication | Mise à jour de la section                                         |
 | 07/12/2022       | 0.9           | Mathieu Pointecouteau | Introduction - Architecture   | Amélioration de la sous-section suite au retour                   |
 | 08/12/2022       | 1.0           | Lilian Verlhac        | Services Dorsaux              | Précision des technologies utilisées                              |
+| 11/12/2022       | 1.1           | Valentin Mille        | Front / Organisation          | Précision des technologies utilisées                              |
+| 11/12/2022       | 1.2           | Valentin Mille        | Organisation                  | Ajout d'un schéma sur l'organisation                              |
+| 11/12/2022       | 1.3           | Valentin Mille        | Organisation                  | Amélioration de la description des tests                          |
 
 
 \clearpage
