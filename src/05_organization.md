@@ -2,7 +2,13 @@
 
 ## Organisation
 
-Afin de gérer le projet et les différentes tâches à effectuer dans le cadre du développement du projet Pizzi nous utilisons [Clickup](https://clickup.com). Cela nous permet d'avoir un suivi en vue Kanban et un espace tout en un où nous entreprosons nos documents. 
+Afin de gérer le projet et les différentes tâches à effectuer dans le cadre du développement du projet Pizzi nous utilisons [Clickup](https://clickup.com). Cela nous permet d'avoir un suivi en vue Kanban et un espace tout en un où nous entreprosons nos documents.
+
+Le projet s'inscrivant dans le cadre de l'Epitech Innovative Project (EIP) et conformément aux méthodes pédagogiques, nous organisons chaque tâche ainsi que son scope associé dans un document nommé PLD (Projet Log Document). Cela nous permet de détailler avec précision l'impact de chaque tâche sur le projet et les conditions qui doivent être complétées afin de valider la tâche. Le PLD est divisé en grandes parties en respesctant l'architecture du projet : application mobile, logiciel commerçant, services dorsaux et enfin le terminal de paiement connecté.
+
+La rédaction du Project Log Document se fait en LaTeX. Dans un but de simplification, l'équipe a mis en place un convertisseur permettant d'écrire des fichiers directement en `.yaml` qui seront ensuite interprétés pour réaliser le PLD. Il faut être vigilant sur l'architecture et le format de vos fichiers sous peine de faire échouer la composition du document.
+
+Pour toute participation sur le PLD, nous nous efforçons de réaliser une Pull-Request sur le repository Git afin que l'équipe puisse relire et corriger les modifications apportées.
 
 Nous utilisons également massivement [Github](https://github.com) pour le développement et le versionning du code. Nous utilisons le système des `issues` afin de se concerter pour des évolutions ou des améliorations de nos fonctionnalités. 
 
@@ -33,6 +39,8 @@ Afin de communiquer entre nous en tant que groupe, nous utilisons [Discord](http
 
 Pour communiquer avec notre référent Epitech, nous utilisons [Microsoft Teams](https://www.microsoft.com/fr-fr/microsoft-teams/group-chat-software).
 
+Pour les appels en visioconférence, nous privilégions [Google Meet](https://meet.google.com).
+
 ### Git
 
 Lorsque vous créez une branche, assurez-vous que celle-ci se nomme en respectant le format `kebab-case`. Si la branche est créée pour résoudre un ticket alors celle-ci doit préfixer le numéro du ticket comme `123-map-view`.
@@ -59,6 +67,29 @@ Tous les mois une nouvelle version bêta de d'une application est déployée afi
 
 ### Les outils utilisés
 
-Dans le cadre de votre collaboration avec le reste de l’équipe, vous aurez accès à différents outils de communication. Le premier outil de l’équipe s’appelle Discord. Si vous avez besoin d’une invitation veuillez envoyer un e-mail à l’adresse pizzi_2023@labeip.epitech.eu avec pour objet “[Invitation Discord]”. Un salon vocal intitulé `mobile` permet de faire les points avec l'équipe. Le salon textuel pour l'équipe mobile s'appelle `mobile` et les messages de statut sur le déploiement sont dans `mobile-deployment`. Pour l'équipe logiciel le salon textuel s'appelle `web` et le salon de déploiement se nomme `web-deployment`.
+Dans le cadre de votre collaboration avec le reste de l’équipe, vous aurez accès à différents outils de communication.
 
-Dans l’objectif de centraliser les outils que Pizzi utilise, la gestion de tickets, les remontés de bugs s’effectuent directement sur GitHub. 
+Le premier outil de l’équipe s’appelle [Discord](https://discord.com). 
+
+Si vous avez besoin d’une invitation pour rejoindre notre serveur discord; veuillez envoyer un e-mail à l’adresse `pizzi_2023@labeip.epitech.eu` avec pour objet “[Invitation Discord]”.
+
+Nous considérerons votre application afin d'y répondre dans les plus brefs délais.
+
+Une fois accepté dans le serveur, vous y trouverez divers canaux de communication, le plus utilisé étant le channel `général` où les informations importantes y sont promulguées.
+
+Vous aurez également accès au canal `ressources` et `access` contenant des informations importantes sur le projet.
+
+Un salon vocal intitulé `mobile` permet de faire les points avec l'équipe spécialisée Mobile.
+Le salon textuel pour l'équipe mobile s'appelle `mobile` et les messages de statut sur le déploiement sont dans `mobile-deployment`.
+
+Pour l'équipe logiciel le salon textuel s'appelle `web` et le salon de déploiement se nomme `web-deployment`.
+
+Dans l’objectif de centraliser les outils que Pizzi utilise, la gestion de tickets, les remontés de bugs s’effectuent directement sur GitHub dans la catégorie `issues`.
+
+Une fois l'issue créée, il est préférable d'y assigner un membre afin d'avoir une réponse promptement. Si vous ne savez pas qui assigner, ne vous en faites pas; un membre de l'équipe s'en chargera.
+
+Pour l'organisation des tâches, nous vous demanderons de créer un compte sur [ClickUp](https://clickup.com).
+
+Le chef de projet se chargera de vous attribuer des tâches et des objectifs en fonction de ce que vous souhaitez réaliser sur le projet. 
+
+Vous pouvez également proposer de nouvelles fonctionnalités avec le tag `open`.

@@ -5,22 +5,19 @@
 Le projet Pizzi se compose d'une partie dorsale sur laquelle s'appuie la partie
 frontale.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{resources/mermaid/project-arch.png}
-  \caption{Schéma de l'architecture du projet Pizzi}
-  \label{fig:project-arch}
-\end{figure}
+\input{src/project-architecture.tex}
 
 La Figure-\ref{fig:project-arch} permet d'avoir un aperçu sur l'architecture du
-projet ainsi que ses différents composants. Les principaux composants y sont
-présents.
+projet. Les différents flux y sont également spécifiés avec leur protocole de
+communication respectif.
 
-Les services dorsaux sont composés d'un serveur d'autorisation et d'un serveur
-de ressources, tous deux s'appuyant sur une base de données.
+Les applications frontales regroupent l'application mobile (PizziMobile) et
+l'application commerçante (PizziWeb). Ces deux applications communiquent en
+HTTP avec le serveur de ressources (PizziResourceServer) ainsi que le serveur
+d'autorisation (PizziAuthorizationServer).
 
-Quand aux applications frontales que sont l'application web et l'application mobile,
-elles s'appuient toutes deux sur les serveurs d'autorisation et de resources.
+PizziAuthorizationServer et PizziResourceServer communiquent aussi avec la
+base de données (PostgreSQL) en SQL.
 
 ## Dépôts
 
@@ -29,7 +26,11 @@ Tous les dépôts du projet sont hébergés sur github dans l'organisation
 dépôts sont à la racine de l'organisation. Nous allons ici les passer en revue,
 cependant le détail de chacun sera explicité dans leur section dédiée.
 
-L'organisation des dépôts est la suivante:
+\input{src/repository-architecture.tex} 
+
+La Figure-\ref{fig:repo-arch} permet d'avoir un aperçu sur l'architecture des dépôts. 
+
+Ces derniers sont détaillés dans la section suivante:
 
 - Application frontales:
   - [PizziMobile](https://github.com/PizziPayment/PizziMobile) est le dépôt
