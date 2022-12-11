@@ -221,11 +221,11 @@ représentée sur la Figure-\ref{fig:network-arch}.
 \input{src/network.tex}
 
 Sur ce schéma, chaque noeud est un conteneur Docker. Ceux préfixés par
-`Pizzi` sont issues d'image Docker faites grâce aux outils de déploiment (voir
+`Pizzi` sont issus d'images Docker faites grâce aux outils de déploiement (voir
 \nameref{sec:deployment_tool}).
 
 Dans ce dépôt se trouve aussi un fichier `docker_compose.yaml` qui permet de
-déployer le backend comme sur la Figure-\ref{fig:network-arch} (voir
+déployer les services dorsaux comme sur la Figure-\ref{fig:network-arch} (voir
 \nameref{sec:deployment_docker_compose}). Sur la figure, les différents réseaux
 sont représentés.
 Ceux dans la couche `Docker` sont des réseaux accessibles uniquement aux membres
@@ -244,7 +244,7 @@ Le conteneur `Pizzi Deploy DB` permet d'effectuer des migrations de la base de
 données. Il doit être lancé avant chaque mise en production afin de mettre à
 jour la base de donnéés.
 
-### Outils de déploiment {#sec:deployment_tool}
+### Outils de déploiement {#sec:deployment_tool}
 
 Le dépôt
 [PizziBackDeploymentTools](https://github.com/PizziPayment/PizziBackDeploymentTools)
@@ -253,8 +253,8 @@ contient les outils nécessaires pour déployer la partie backend de Pizzi.
 #### Génération des applications
 
 Dans ce dépôt, se trouve un script `update.sh` permettant de créer les trois
-images. Elles sont générées chacune en suivant les même étapes. Nous allons
-ici prendre comme d'exemple le serveur d'autorisation:
+images. Elles sont générées chacune en suivant les mêmes étapes. Nous allons
+ici prendre comme exemple le serveur d'autorisation:
 
 - Téléchargement des sources du projet depuis le dépôt de celui-ci
   ```bash
@@ -282,7 +282,7 @@ ici prendre comme d'exemple le serveur d'autorisation:
     - Copie des dépendances de production dans le dossier d'artéfact
     - Téléchargement des dépendances de développement
     - Transpilation des sources du projet
-    - Copie des sources transpiler dans le dossier d'artéfact
+    - Copie des sources transpilées dans le dossier d'artéfact
     - Copie de la configuration du projet dans le dossier d'artéfact
 
 \vspace{\baselineskip}
@@ -295,14 +295,14 @@ ici prendre comme d'exemple le serveur d'autorisation:
   Dockerfile. Celui-ci effectue les opérations suivantes:
     - Copie du dossier d'artéfact généré à l'étape précédente
     - Dans le cas d'un serveur, exposition d'un port
-    - Définition du point entré
+    - Définition du point entrée
 
 Un script `clean.sh` se trouve également dans le dépôt, il permet de supprimer
-les artefacts, caches et images docker créés par le script `update.sh`.
+les artéfacts, caches et images docker créés par le script `update.sh`.
 
 #### Déploiement {#sec:deployment_docker_compose}
 
-Une fois les images Docker générées, le déploiment s'effecthe à l'aide des
+Une fois les images Docker générées, le déploiement s'effectue à l'aide des
 commandes suivantes:
 ```bash
 docker compose up -d db
