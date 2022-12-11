@@ -53,7 +53,13 @@ Une fois que votre contribution sera fusionnée avec la branche `develop` un dé
 
 ### Tests
 
-Il est obligatoire d'écrire des tests unitaires pour chaque nouvelle fonctionnalité. Les tests doivent couvrir le projet à 90% minimum. Différents types de tests existent afin d'arriver à cet objectif. Les tests `snapshots` pour vérifier que l'interface corresponde aux attentes et les tests unitaires pour tester chaque fonctionnalité pour tester les cas d'usage. Dans le cas où votre contribution ne posséderait pas de tests unitaires, celle-ci se verra refusée lors de la demande de fusion.
+Il est obligatoire d'écrire des tests unitaires pour chaque nouvelle fonctionnalité. Les tests doivent couvrir le projet à 90% minimum. Cette contrainte permet au projet de garder une qualité de code exemplaire mais aussi de détecter la moindre régression sur le projet. Différents types de tests existent afin d'arriver à cet objectif.
+
+- Les *tests `snapshots`*: utilisés par les applications frontales seulement, ils permettent de vérifier que l'interface ne change pas au fil des changements.
+
+- Les *tests unitaires*: afin de tester chaque fonctionnalité et les cas d'usage. Dans le cas où votre contribution ne posséderait pas de tests unitaires, celle-ci se verra refusée lors de la demande de fusion.
+
+À chaque changement sur le dépôt git, une action est lancée pour effectuer l'ensemble des tests sur le projet. Dans le cas où des tests échouent, c'est à vous de les résoudre mais vous pourrez aussi demander de l'aide à l'équipe. Une demande de fusion sera automatiquement refusée si celle-ci contient des tests qui échouent. Par ailleurs, une demande de fusion ne peut pas être fusionnée avec une branche de référence (comme `develop` ou `master`) si elle possède des erreurs dans les tests.
 
 ### Organisation de développement
 
