@@ -1,8 +1,8 @@
-# TPE
+# Tpe
 
 Cette section est composée de deux sous sections, abordant la partie matérielle du terminal de paiement dans la première, puis la partie logiciel de celui-ci dans la seconde.
 
-## HARDWARE
+## Hardware
 
 ### Composants utilisés
 
@@ -34,7 +34,7 @@ La coque du terminal a été fabriquée à l'aide d'une imprimante 3D et de plas
 
 La Figure-\ref{fig:tpe_bb} est un schéma de montage du TPE réalisé a l'aide de [Fritzing](https://fritzing.org/).
 
-## LOGICIEL
+## Logiciel
 
 ### Technologies utilisées
 
