@@ -1,6 +1,6 @@
 \definecolor{Darkgreen}{RGB}{40,133,57}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}[
 			transform shape, scale=1,
@@ -36,34 +36,34 @@
 
 		\node(launch_unit_tests_1) [above of=code_update, unit]{Lancement des tests unitaires du projet};
 
-        \node(success_1) [above left of=launch_unit_tests_1, unit]{Succès};
-        \node(failure_1) [above right of=launch_unit_tests_1, unit]{Échec};
+		\node(success_1) [above left of=launch_unit_tests_1, unit]{Succès};
+		\node(failure_1) [above right of=launch_unit_tests_1, unit]{Échec};
 
-        \node(develop_and_all_branch) [above right of=success_1, unit]{Branche develop et toutes les autres branches};
+		\node(develop_and_all_branch) [above right of=success_1, unit]{Branche develop et toutes les autres branches};
 
-        \node(master_branch) [above of=develop_and_all_branch, unit]{Branche master};
+		\node(master_branch) [above of=develop_and_all_branch, unit]{Branche master};
 
 		\node(launch_unit_tests_2) [above of=master_branch, unit]{Lancement des tests unitaires du projet};
 
-        \node(success_2) [above left of=launch_unit_tests_2, unit]{Succès};
-        \node(failure_2) [above right of=launch_unit_tests_2, unit]{Échec};
+		\node(success_2) [above left of=launch_unit_tests_2, unit]{Succès};
+		\node(failure_2) [above right of=launch_unit_tests_2, unit]{Échec};
 
-        \node(deployment) [above right of=success_2, unit]{Déploiement de l'application};
+		\node(deployment) [above right of=success_2, unit]{Déploiement de l'application};
 
 		\draw [->, link] (code_update.north)                  -- node[left, link_label] {Envoie du code sur le dépôt} (launch_unit_tests_1.south);
 
 		\draw [->, link] (launch_unit_tests_1.north)                  -- node[left, link_label] {} (success_1.south);
 		\draw [->, link] (launch_unit_tests_1.north)                  -- node[left, link_label] {} (failure_1.south);
 
-        \draw [->, link] (success_1.north)                    -- node[right, link_label] {Demande de fusion} (develop_and_all_branch.south);
-        \draw [->, link] (failure_1.east) to [out=300,in=0]  node[right, link_label] {} (code_update.east);
+		\draw [->, link] (success_1.north)                    -- node[right, link_label] {Demande de fusion} (develop_and_all_branch.south);
+		\draw [->, link] (failure_1.east) to [out=300,in=0]  node[right, link_label] {} (code_update.east);
 
-        \draw [->, link] (master_branch.north)       -- node[left, link_label] {Demande de fusion} (launch_unit_tests_2.south);
+		\draw [->, link] (master_branch.north)       -- node[left, link_label] {Demande de fusion} (launch_unit_tests_2.south);
 
 		\draw [->, link] (launch_unit_tests_2.north)         -- node[left, link_label] {} (success_2.south);
-        \draw [->, link] (launch_unit_tests_2.north)          -- node[right, link_label] {} (failure_2.south);
+		\draw [->, link] (launch_unit_tests_2.north)          -- node[right, link_label] {} (failure_2.south);
 
-        \draw [->, link] (success_2.north)                    -- node[right, link_label] {} (deployment.south);
+		\draw [->, link] (success_2.north)                    -- node[right, link_label] {} (deployment.south);
 		\draw [->, link] (failure_2.east) to [out=300,in=0]  node[near end, left, link_label] {Correction des tests unitaires} (code_update.east);
 
 		\begin{pgfonlayer}{background}
