@@ -73,9 +73,30 @@ domaines, comme par exemple le middleware d'identification des utilisateurs.
 
 ### Tests
 
+Les serveurs d'autorisation et de ressources sont testés avec des tests
+fonctionnels ecrits à l'aide du framework [Jest](https://jestjs.io) et de
+[SuperTest](https://www.npmjs.com/package/supertest) pour simuler des requêtes
+HTTP. Ils se lancent avec la commande `yarn test`.
+
+Chaque endpoint exposé par un serveur doit systematiquement être testé afin de
+valider son fonctionnement.
+
+Les tests sont exécutés sur chaque pull request des différents projets en
+utilisant des Github Actions, bloquant le merge s'ils ne passent pas pour
+empêcher les regressions. Une pull request valide s'affiche comme sur la figure
+\ref{fig:back-pull-request}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{resources/pull_request.png}
+  \caption{Pull request avec tests qui passent.}
+  \label{fig:back-pull-request}
+\end{figure}
+
 Les tests sont stockés dans le dossier `tests`. Chaque fichier dans le dossier
-est une suite de tests pour un domaine spécifique. A noter que, à l'instar du dossier `app`, 
-le dossier `common` regroupe des services et `models` servants pour de multiple tests.
+est une suite de tests pour un domaine spécifique. A noter que, à l'instar du
+dossier `app`, le dossier `common` regroupe des services et `models` servants
+pour de multiple tests.
 
 ### Documentation
 
@@ -179,9 +200,20 @@ rajoute des fonctions utiles lors de l'écriture d'un service.
 
 ### Tests
 
-Les tests sont stockés dans le dossier `tests` et le sous-dossier `services`. Chaque fichier dans le dossier
-est une suite de tests pour un service spécifique. A noter que, à l'instar du dossier `src`, 
-le dossier `common` regroupe des services et `models` servants pour de multiple tests.
+`pizzi-db` est testé avec des tests fonctionnels ecrits à l'aide du framework
+[Jest](https://jestjs.io). Ils se lancent avec la commande `yarn test`.
+
+Chaque fonction exposée par un service doit systematiquement être testée afin
+de valider son fonctionnement.
+
+Les tests sont exécutés sur chaque pull request des différents projets en
+utilisant des Github Actions, bloquant le merge s'ils ne passent pas pour
+empêcher les regressions.
+
+Les tests sont stockés dans le dossier `tests` et le sous-dossier `services`.
+Chaque fichier dans le dossier est une suite de tests pour un service
+spécifique. A noter que, à l'instar du dossier `src`, le dossier `common`
+regroupe des services et `models` servants pour de multiple tests.
 
 ### Convention de code
 
