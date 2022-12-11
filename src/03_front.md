@@ -4,7 +4,14 @@
 
 ### Technologies utilisées
 
-Le projet mobile a été développé en [typescript](https://www.typescriptlang.org/) en utilisant [react-native](https://reactnative.dev/) afin d’avoir un seul code pour l’application mobile. Pizzi utilise le kit d'outil [expo](https://docs.expo.dev/) afin de faciliter le déploiement de l’application mobile.
+Le projet mobile a été développé en [typescript](https://www.typescriptlang.org/). Le choix du langage s'est fait naturellement pour faciliter le développement et profiter du typage afin de clarifier le code et trouver des bugs plus facilement. Nous utilisons le framework [react-native](https://reactnative.dev/) dans le but d'unifier le code pour les plateformes Android et iOS. Pizzi utilise le kit d'outil [expo](https://docs.expo.dev/) permettant de faciliter le déploiement de l’application mobile mais également d'accéder à de nombreux outils de développement.
+
+Puisque que nous utilisons react-native, nous utilisons le gestionnaire de store [Redux](https://redux.js.org/). Malgré son initialisation coûteuse en développement, il permet de rendre l'application beaucoup plus scalable comparer aux autres solutions existantes. 
+
+En tant que coordinateur des écrans, l'application Pizzi utilise [react-navigation](https://reactnavigation.org/) un projet développé par de nombreux experts en react-native. Cette librairie s'est démarquée dans sa simplicité d'intégration, sa syntaxe simple à comprendre mais aussi sur les nombreux comportements adaptatifs.
+
+Sur le plan architecture, l'application se base sur la [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html). Ce choix permet de séparer type de couche et d'isoler le comportement des librairies. Ainsi, si nous voulons changer de librairie de navigation ou de requête HTTP dans le futur nous pourrons le faire sans problème.
+
 À la racine du dépôt, vous trouverez tous les fichiers de configurations nécessaires au projet:
 
 - [app.json](https://docs.expo.dev/versions/latest/config/app/): pour configurer expo.
@@ -19,10 +26,22 @@ Le projet mobile a été développé en [typescript](https://www.typescriptlang.
 ### Contribution
 
 L’équipe Pizzi utilise la gestion de configuration Git afin de garder une trace de chaque version de l’application et du travail de chacun.
+L'ensemble des membres de Pizzi ont préféré utiliser [GitHub](https://github.com/) vu que l'ensemble de l'équipe était déjà présent sur cette plateforme.
 
 #### Normes du projet
 
 Afin de contribuer au développement de l’application mobile, vous devez vous assurer d’avoir le linter d’activer et de formater votre code. Cela permet de standardiser le code, d’éviter des changements inutiles et de faire en sorte que toute l’équipe se base sur un même style de code. L'équipe utilise actuellement [Eslint](https://eslint.org/) et [Prettier](https://prettier.io/) afin de corriger et de formater le code.
+
+### Déploiement de l'application mobile sur Android (APK)
+
+Le déploiement de l'application mobile s'effectue automatiquement lorsque des changements sont réalisés sur la branche `master` de GitHub. Le déploiement est réalisé avec [GitHub Actions](https://github.com/features/actions) outil directement intégré à `GitHub`. Dans l'organisation du projet chaque membre souhaitant développer sur l'application mobile doit ouvrir une branche se basant sur la branche `develop`. Une fois que la fonctionnalité est réalisée, la personne peut créer une demande de fusion dans laquelle le code sera revu par ses pairs. Des changements pourront être demandés afin de préserver la qualité du code puis la branche contenant la nouvelle fonctionnalité pourra être fusionnée avec la branche `develop`.
+
+Chaque branche du dépôt contient une action à chaque mise à jour du code. Cette action lançant les tests unitaires sur l'ensemble du projet permet de détecter toute régression sur le projet.
+
+Ainsi l'application se construit sur la plateforme de déploiement [EAS Build](https://docs.expo.dev/build/introduction/). Le choix était évident sur l'outil de déploiement puisque nous utilisions déjà `expo` qui fourni cette solution clé en main.
+Une fois que la construction de la version d'Android, l'APK (Android Package) est disponible et peut être utilisé sur un appareil Android.
+
+Vous pouvez visionner le schéma suivant montrant le workflow de tests et déploiement de l'application.
 
 ## Logiciel commerçant
 
