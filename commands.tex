@@ -1,0 +1,62 @@
+\NewDocumentCommand{\rectschema}{O{0.5} O{} m m}{
+
+	\newcommand{\imageSizeFactor}{#1}
+	\newcommand{\isDebug}{#2}
+	\newcommand{\imagePath}{#3}
+
+	\begin{tikzpicture}[
+			common/.style={
+					rounded corners=2mm,
+					very thick,
+				},
+			area/.style={
+					orange!50,
+				},
+			label/.style={
+					align=center,
+					fill=white!90,
+					draw=orange!50,
+				}
+		]
+
+		\node [
+			above right,
+			inner sep=0
+		] (image) at (0,0) {\includegraphics[width=\imageSizeFactor\textwidth]{\imagePath}};
+
+		\begin{scope}[
+				x={($0.1*(image.south east)$)},
+				y={($0.1*(image.north west)$)}]
+
+			\ifthenelse{\equal{\isDebug}{debug}}
+			{
+				\draw[lightgray,step=1] (image.south west) grid (image.north east);
+				\foreach \x in {0,1,...,10} { \node [below] at (\x,0) {\x}; }
+				\foreach \y in {0,1,...,10} { \node [left] at (0,\y) {\y};}
+			}
+
+			\foreach \botLeftX/\botLeftY/\topRightX/\topRightY/\label/\labelPosition in {#4} {
+					\draw [common, area] (\botLeftX,\botLeftY) rectangle (\topRightX,\topRightY);
+					\newcommand{\Y}{\fpeval{((\topRightY - \botLeftY) / 2) + \botLeftY}}
+					\newcommand{\X}{\fpeval{((\topRightX - \botLeftX) / 2) + \botLeftX}}
+
+					\ifnum \labelPosition=0 % Left
+						\node[common, label, anchor=east, xshift=2mm] at (\botLeftX, \Y) {\label};
+					\fi
+
+					\ifnum \labelPosition=1 % Right
+						\node[common, label, anchor=west, xshift=-2mm] at (\topRightX, \Y) {\label};
+					\fi
+
+					\ifnum \labelPosition=2 % Top
+						\node[common, label, anchor=south, yshift=-2mm] at (\X, \topRightY) {\label};
+					\fi
+
+					\ifnum \labelPosition=3 % Bottom
+						\node[common, label, anchor=north, yshift=2mm] at (\X, \botLeftY) {\label};
+					\fi
+				}
+		\end{scope}
+
+	\end{tikzpicture}
+}

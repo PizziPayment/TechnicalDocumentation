@@ -28,7 +28,7 @@ sur Pizzi.
 - **Objet**: Manuel du développeur
 - **Date de mise à jour**: \today
 - **Auteur**: Groupe Pizzi
-- **Email**: 
+- **Email**:
   - remi.poulenard@epitech.eu
   - valentin.mille@epitech.eu
   - lilian.verhlac@epitech.eu
@@ -57,6 +57,7 @@ sur Pizzi.
 | 11/12/2022       | 1.4           | Valentin Mille        | Front / Organisation          | Précision des technologies utilisées                              |
 | 11/12/2022       | 1.5           | Valentin Mille        | Organisation                  | Ajout d'un schéma sur l'organisation                              |
 | 11/12/2022       | 1.6           | Valentin Mille        | Organisation                  | Amélioration de la description des tests                          |
+| 11/12/2022       | 1.7           | Florian Antoine       | TPE                           | Ajout de la section                                               |
 
 
 \clearpage

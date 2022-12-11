@@ -13,7 +13,8 @@ SOURCES = 00_info.md \
 					01_intro.md \
 					02_back.md \
 					03_front.md \
-					04_organization.md
+					04_tpe.md \
+					05_organization.md
 
 PANDOC_METADATA_OPTIONS = --metadata date="`date -u '+%d / %m / %Y'`"
 PANDOC_OPTIONS = --resource-path $(RESOURCE_PATH) --template $(TEMPLATE_PATH) $(PANDOC_METADATA_OPTIONS) --highlight-style pygments
