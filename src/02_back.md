@@ -81,13 +81,17 @@ HTTP. Ils se lancent avec la commande `yarn test`.
 Chaque endpoint exposé par un serveur doit systematiquement être testé afin de
 valider son fonctionnement.
 
-Les tests sont exécutés sur chaque pull request des differents projets en
+Les tests sont exécutés sur chaque pull request des différents projets en
 utilisant des Github Actions, bloquant le merge s'ils ne passent pas pour
-empêcher les regressions.
+empêcher les regressions. Une pull request valide s'affiche comme sur la figure
+\ref{fig:back-pull-request}.
 
-\begin{center}
+\begin{figure}[H]
+  \centering
   \includegraphics[width=0.8\textwidth]{resources/pull_request.png}
-\end{center}
+  \caption{Pull request avec tests qui passent.}
+  \label{fig:back-pull-request}
+\end{figure}
 
 Les tests sont stockés dans le dossier `tests`. Chaque fichier dans le dossier
 est une suite de tests pour un domaine spécifique. A noter que, à l'instar du
@@ -196,13 +200,13 @@ rajoute des fonctions utiles lors de l'écriture d'un service.
 
 ### Tests
 
-`pizzi-db` est teste avec des tests fonctionnels ecrits à l'aide du framework
+`pizzi-db` est testé avec des tests fonctionnels ecrits à l'aide du framework
 [Jest](https://jestjs.io). Ils se lancent avec la commande `yarn test`.
 
-Chaque fonction exposee par un service doit systematiquement etre testee afin
+Chaque fonction exposée par un service doit systematiquement etre testée afin
 de valider son fonctionnement.
 
-Les tests sont exécutés sur chaque pull request des differents projets en
+Les tests sont exécutés sur chaque pull request des différents projets en
 utilisant des Github Actions, bloquant le merge s'ils ne passent pas pour
 empêcher les regressions.
 
