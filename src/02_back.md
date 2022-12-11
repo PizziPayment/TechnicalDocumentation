@@ -203,7 +203,7 @@ rajoute des fonctions utiles lors de l'écriture d'un service.
 `pizzi-db` est testé avec des tests fonctionnels ecrits à l'aide du framework
 [Jest](https://jestjs.io). Ils se lancent avec la commande `yarn test`.
 
-Chaque fonction exposée par un service doit systematiquement etre testée afin
+Chaque fonction exposée par un service doit systematiquement être testée afin
 de valider son fonctionnement.
 
 Les tests sont exécutés sur chaque pull request des différents projets en
