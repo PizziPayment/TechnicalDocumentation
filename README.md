@@ -5,7 +5,6 @@ A wonderful document to give to Epitech.
 ## Requirements
   - [tectonic](https://tectonic-typesetting.github.io/en-US/)
   - [pandoc](https://pandoc.org)
-  - [mermaid-cli](https://github.com/mermaid-js/mermaid-cli)
 
 ## Build document
 

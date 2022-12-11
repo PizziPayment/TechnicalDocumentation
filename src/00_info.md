@@ -3,7 +3,7 @@ project: Pizzi
 author:
   - Groupe Pizzi - PROMO 2023
 title: 'Documentation technique'
-subtitle: 'Manuel utilisateur'
+subtitle: 'Manuel du développeur'
 lang: fr
 ---
 
@@ -26,6 +26,7 @@ sur Pizzi.
 
 - **Titre**: Documentation technique
 - **Objet**: Manuel du développeur
+- **Date de mise à jour**: \today
 - **Auteur**: Groupe Pizzi
 - **Email**: 
   - remi.poulenard@epitech.eu
@@ -50,9 +51,12 @@ sur Pizzi.
 | 07/12/2022       | 0.8           | Rémi Poulenard        | Organisation et communication | Mise à jour de la section                                         |
 | 07/12/2022       | 0.9           | Mathieu Pointecouteau | Introduction - Architecture   | Amélioration de la sous-section suite au retour                   |
 | 08/12/2022       | 1.0           | Lilian Verlhac        | Services Dorsaux              | Précision des technologies utilisées                              |
-| 11/12/2022       | 1.1           | Valentin Mille        | Front / Organisation          | Précision des technologies utilisées                              |
-| 11/12/2022       | 1.2           | Valentin Mille        | Organisation                  | Ajout d'un schéma sur l'organisation                              |
-| 11/12/2022       | 1.3           | Valentin Mille        | Organisation                  | Amélioration de la description des tests                          |
+| 08/12/2022       | 1.1           | Lilian Verlhac        | Dépots                        | Affichage d'un schéma des dépots                                  |
+| 11/12/2022       | 1.2           | Alban Garofoli        | Services Dorsaux              | Amélioration des sections sur les tests                           |
+| 11/12/2022       | 1.3           | Mathieu Pointecouteau | Infrastructure                | Ajout de la section                                               |
+| 11/12/2022       | 1.4           | Valentin Mille        | Front / Organisation          | Précision des technologies utilisées                              |
+| 11/12/2022       | 1.5           | Valentin Mille        | Organisation                  | Ajout d'un schéma sur l'organisation                              |
+| 11/12/2022       | 1.6           | Valentin Mille        | Organisation                  | Amélioration de la description des tests                          |
 
 
 \clearpage
