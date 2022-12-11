@@ -62,6 +62,7 @@ sur Pizzi.
 
 \clearpage
 
+\setcounter{tocdepth}{2}
 \tableofcontents
 
 \clearpage
