@@ -1,6 +1,6 @@
 # TPE
 
-Cette Documentation traite en 2 partie, l’hardware puis par la suite le Logiciel du terminal de paiement.
+Cette section traite est composée de deux sous sections, abordant la partie matérille du terminal de paiement dans la première, puis la partie logiciel de celui-ci dans la seconde.
 
 ## HARDWARE
 
