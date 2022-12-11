@@ -1,0 +1,76 @@
+\definecolor{Darkgreen}{RGB}{40,133,57}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}[
+			transform shape, scale=1,
+			link/.style={->,draw=black,thick, minimum size=1mm},
+			link_label/.style={inner sep=0.2cm},
+			link_label_step/.style={inner sep=0.3cm},
+			unit/.style={
+					rectangle,
+					fill=black!3,
+					draw,
+					thick,
+					minimum size = 0.5cm,
+					minimum height=1cm,
+					text width = 4cm,
+					text centered,
+					align=center,
+					node distance=3cm,
+					rounded corners=2mm
+				},
+			functionnality_deployement/.style={
+					rectangle,
+					fill=yellow!40,
+					inner sep=0.3cm,
+					rounded corners=2mm},
+			develop_deployment/.style={
+					rectangle,
+					fill=orange!40,
+					inner sep=0.3cm,
+					rounded corners=2mm}
+		]
+
+		\node(code_update) at (1, 0) [unit]{Mise à jour du code sur une branche à part};
+
+		\node(launch_unit_tests_1) [above of=code_update, unit]{Lancement des tests unitaires du projet};
+
+        \node(success_1) [above left of=launch_unit_tests_1, unit]{Succès};
+        \node(failure_1) [above right of=launch_unit_tests_1, unit]{Échec};
+
+        \node(develop_and_all_branch) [above right of=success_1, unit]{Branche develop et toutes les autres branches};
+
+        \node(master_branch) [above of=develop_and_all_branch, unit]{Branche master};
+
+		\node(launch_unit_tests_2) [above of=master_branch, unit]{Lancement des tests unitaires du projet};
+
+        \node(success_2) [above left of=launch_unit_tests_2, unit]{Succès};
+        \node(failure_2) [above right of=launch_unit_tests_2, unit]{Échec};
+
+        \node(deployment) [above right of=success_2, unit]{Déploiement de l'application};
+
+		\draw [->, link] (code_update.north)                  -- node[left, link_label] {Envoie du code sur le dépôt} (launch_unit_tests_1.south);
+
+		\draw [->, link] (launch_unit_tests_1.north)                  -- node[left, link_label] {} (success_1.south);
+		\draw [->, link] (launch_unit_tests_1.north)                  -- node[left, link_label] {} (failure_1.south);
+
+        \draw [->, link] (success_1.north)                    -- node[right, link_label] {Demande de fusion} (develop_and_all_branch.south);
+        \draw [->, link] (failure_1.east) to [out=300,in=0]  node[right, link_label] {} (code_update.east);
+
+        \draw [->, link] (master_branch.north)       -- node[left, link_label] {Demande de fusion} (launch_unit_tests_2.south);
+
+		\draw [->, link] (launch_unit_tests_2.north)         -- node[left, link_label] {} (success_2.south);
+        \draw [->, link] (launch_unit_tests_2.north)          -- node[right, link_label] {} (failure_2.south);
+
+        \draw [->, link] (success_2.north)                    -- node[right, link_label] {} (deployment.south);
+		\draw [->, link] (failure_2.east) to [out=300,in=0]  node[near end, left, link_label] {Correction des tests unitaires} (code_update.east);
+
+		\begin{pgfonlayer}{background}
+			\node [functionnality_deployement, fit=(code_update) (success_1) (failure_1) (develop_and_all_branch), label={[yshift=-1mm, fill=yellow!40, rounded corners=1mm]north:{Fusion d'une branche à fonctionnalité avec la branche develop}}] {};
+			\node [develop_deployment, fit=(master_branch) (launch_unit_tests_2) (success_2) (failure_2) (deployment), label={[yshift=1mm, fill=orange!40, rounded corners=1mm]south:{Fusion de la branche develop à la branche master}}] {};
+		\end{pgfonlayer}
+	\end{tikzpicture}
+	\caption{Schéma du workflow de déploiement du projet}
+	\label{fig:organization-flow}
+\end{figure}
