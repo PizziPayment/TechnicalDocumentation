@@ -54,7 +54,11 @@ sur Pizzi.
 | 08/12/2022       | 1.1           | Lilian Verlhac        | Dépots                        | Affichage d'un schéma des dépots                                  |
 | 11/12/2022       | 1.2           | Alban Garofoli        | Services Dorsaux              | Amélioration des sections sur les tests                           |
 | 11/12/2022       | 1.3           | Mathieu Pointecouteau | Infrastructure                | Ajout de la section                                               |
-| 11/12/2022       | 1.4           | Florian Antoine       | TPE                           | Ajout de la section                                               |
+| 11/12/2022       | 1.4           | Valentin Mille        | Front / Organisation          | Précision des technologies utilisées                              |
+| 11/12/2022       | 1.5           | Valentin Mille        | Organisation                  | Ajout d'un schéma sur l'organisation                              |
+| 11/12/2022       | 1.6           | Valentin Mille        | Organisation                  | Amélioration de la description des tests                          |
+| 11/12/2022       | 1.7           | Florian Antoine       | TPE                           | Ajout de la section                                               |
+
 
 \clearpage
 
