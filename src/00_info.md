@@ -3,7 +3,7 @@ project: Pizzi
 author:
   - Groupe Pizzi - PROMO 2023
 title: 'Documentation technique'
-subtitle: 'Manuel utilisateur'
+subtitle: 'Manuel du développeur'
 lang: fr
 ---
 
@@ -26,6 +26,7 @@ sur Pizzi.
 
 - **Titre**: Documentation technique
 - **Objet**: Manuel du développeur
+- **Date de mise à jour**: \today
 - **Auteur**: Groupe Pizzi
 - **Email**: 
   - remi.poulenard@epitech.eu
