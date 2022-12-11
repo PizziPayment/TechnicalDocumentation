@@ -1,0 +1,79 @@
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+			transform shape, scale=1,
+			link/.style={<->,draw=black,thick},
+			link_label/.style={
+					inner sep=2mm,
+					rounded corners=2mm,
+					fill=white,
+					draw=Dandelion,
+				},
+			unit/.style={
+					rectangle,
+					fill=black!3,
+					draw,
+					thick,
+					minimum size=0.5cm,
+					minimum height=1cm,
+					text width=3cm,
+					inner sep=0.2cm,
+					outer sep=0.3,
+					text centered,
+					node distance=3cm,
+					rounded corners=2mm
+				},
+			bgServer/.style={
+					rectangle,
+					fill=purple!30,
+					inner sep=0.3cm,
+					rounded corners=2mm,
+					minimum width=11cm,
+					minimum height=10.5cm,
+				},
+			bgDocker/.style={
+					rectangle,
+					fill=yellow!30,
+					inner sep=0.3cm,
+					rounded corners=2mm
+				},
+			bgLocalhost/.style={
+					rectangle,
+					fill=blue!30,
+					inner sep=0.3cm,
+					rounded corners=2mm
+				},
+		]
+		\node(db)[unit]{PostgreSQL};
+		\node(rsc)[above left of=db, unit]{Pizzi Serveur de ressources};
+		\node(auth)[above right of=db, unit]{Pizzi Serveur d'authorisation};
+		\node(deploy_db)[below left of=db, unit]{Pizzi Deploy DB};
+		\node(proxy)[above right=2cm and -1.3cm of rsc, unit]{Swag (reverse proxy)};
+		\node(internet)[above of=proxy, unit, fill=white, white]{};
+
+		\draw [link] ([xshift=6.3ex] rsc.south) -- ([xshift=-6ex]db.north)
+		node[link_label, left, midway, xshift=2mm] {rsc-server-tier};
+
+		\draw [link] ([xshift=-6.3ex] auth.south) -- ([xshift=6ex]db.north)
+		node[link_label, right, midway, xshift=-2mm] {auth-server-tier};
+
+		\draw [link] ([xshift=6.3ex] deploy_db.north) -- ([xshift=-6ex]db.south)
+		node[link_label, left, midway, xshift=2mm] {db-tier};
+
+		\draw [link] ([xshift=6.3ex] rsc.north) -- ([xshift=-6ex]proxy.south)
+		node[link_label, left, near start, xshift=2mm, yshift=1mm] {Port exposé};
+		\draw [link] ([xshift=-6.3ex] auth.north) -- ([xshift=6ex]proxy.south)
+		node[link_label, right, near start, xshift=-2mm, yshift=1mm] {Port exposé};
+
+		\draw [link, line width=0.60mm] (proxy.north) -- (internet.south)
+		node[link_label, midway] {internet};
+
+		\begin{pgfonlayer}{background}
+			\node [bgServer, fit=(proxy) (db) (rsc) (auth) (deploy_db), label={[yshift=2mm, fill=purple!30, rounded corners=1mm]south:{Serveur}}] {};
+			\node [bgLocalhost, fit=(proxy), label={[yshift=2mm, fill=blue!30, rounded corners=1mm]south:{Localhost}}] {};
+			\node [bgDocker, fit=(db) (rsc) (auth) (deploy_db), label={[yshift=1mm, fill=yellow!30, rounded corners=1mm]south:{Docker}}] {};
+		\end{pgfonlayer}
+	\end{tikzpicture}
+	\caption{Architecture réseaux}
+	\label{fig:network-arch}
+\end{figure}
