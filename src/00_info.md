@@ -26,7 +26,7 @@ sur Pizzi.
 
 - **Titre**: Documentation technique
 - **Objet**: Manuel du développeur
-- **Date de mise à jour**: 11 décembre 2022
+- **Date de mise à jour**: \today
 - **Auteur**: Groupe Pizzi
 - **Email**: 
   - remi.poulenard@epitech.eu
