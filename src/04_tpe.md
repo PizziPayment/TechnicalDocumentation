@@ -51,10 +51,10 @@ Le déploiement se fait par la suite grâce à platformIO, qui permet de compile
 
 ### Prérequis
 
-Assurez vous d'avoir `vscode` d'installer ainsi que l’extension `PlatformIO`.
-Brancher votre TPE en USB à votre ordinateur.
+Assurez vous d'avoir `vscode` installer ainsi que l’extension `PlatformIO`.
+Branchez votre TPE en USB à votre ordinateur.
 
-Une fois le projet ouvert sur vscode, il vous suffit d'ouvrir l'extension
+Une fois le projet ouvert sur `vscode`, il vous suffit d'ouvrir l'extension
 PlatformIO comme indiqué sur la figure ~\ref{fig:platformio_btn}.
 
 \begin{figure}[H]
@@ -84,8 +84,8 @@ sur \ref{fig:finish_upload}.
   \label{fig:finish_upload}
 \end{figure}
 
-Une fois le `success` affiché, l'upload est fini, le TPE redémarre sans
-qu'aucune action ne soit nécessaire.
+Une fois le `success` affiché, le téléversement est fini et le TPE redémarre
+sans qu'aucune action ne soit nécessaire.
 
 ### Contribution
 
