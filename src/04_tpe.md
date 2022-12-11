@@ -15,15 +15,18 @@ Voici la liste des composants utilisé dans la réalisation du TPE.
 
 ### Coque 3D
 
-La coque du terminal a été créée à l'aide d'une imprimante3D et de plastique dit PLA, pour cela la coque a été modélisée sur le logiciel [Tinkercad](https://www.tinkercad.com/), puis le fichier 3D a été slicé a l'aide de [Simplify3D](https://www.simplify3d.com/) afin de créer un `.gcode` format utilise par l imprimante.
+La coque du terminal a été fabriquée à l'aide d'une imprimante 3D et de plastique dit PLA. La coque a été modélisée sur le logiciel [Tinkercad](https://www.tinkercad.com/). Le fichier de modélisation 3D a ensuite été slicé à l'aide du logiciel [Simplify3D](https://www.simplify3d.com/) afin de créer un fichier au format `.gcode` utilisé par l'imprimante.
 
 ### Montage
 
-Voici un svg du schéma de montage du TPE réalisé a l'aide de [Fritzing](https://fritzing.org/)
+\begin{figure}[H]
+\centering
+\includegraphics{resources/tpe_bb.png}
+\caption{Schéma de montage du TPE}
+\label{fig:tpe_bb}
+\end{figure}
 
-![schema montage](../resources/tpe_bb.png)
-
----
+La Figure-\ref{fig:tpe_bb} est un schéma de montage du TPE réalisé a l'aide de [Fritzing](https://fritzing.org/)
 
 ## LOGICIEL
 
@@ -38,7 +41,7 @@ Le Projet a été codé avec le Framework Arduino. Nous avons aussi utilisé, [P
 
 ### Norme du projet
 
-Afin de contribuer au développement du TPE, et dans le but de standardiser le code, d’éviter des changements inutiles et de maintenir la qualité du code, l'équipe se base sur les normes utilisées pour les projets C/C++.
+Afin de contribuer au développement du TPE, et dans le but de standardiser le code, d’éviter des changements inutiles et de maintenir la qualité du code, l'équipe se base sur les normes utilisées pour les projets C/C++. Pour ce qui est de l'architecture du projet nous nous basons sur celle généré par PlatformIO, qui consiste a séparer les sources, des includes et des fichiers de tests.
 
 ### Déploiement
 
